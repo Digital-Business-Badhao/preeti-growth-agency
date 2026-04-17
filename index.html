@@ -21,6 +21,12 @@
     <meta name="description" content="Preeti Growth Agency - Best Digital Marketing Agency in Faridabad Lowest Price.">
     <link rel="canonical" href="https://digital-business-badhao.github.io/preeti-growth-agency/" />
 </head>
+    <div style="background: #111; color: #fff; padding: 10px; text-align: center; font-family: sans-serif;">
+    <p style="margin: 0; font-size: 14px;">
+        <span style="background: #ff0000; padding: 2px 8px; border-radius: 3px; margin-right: 10px; font-weight: bold; font-size: 12px;">NEW TREND</span>
+        <marquee style="width: 80%; vertical-align: middle;">Real Estate Ads perform 3x better with Reel Format in 2026 | Google SEO update for local businesses | WhatsApp marketing is now more effective than Email!</marquee>
+    </p>
+</div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -97,6 +103,49 @@
             </div>
         </div>
     </section>
+    <section style="max-width: 800px; margin: 40px auto; padding: 30px; background: #fdfdfd; border: 2px solid #eee; border-radius: 20px; font-family: sans-serif; box-sizing: border-box;">
+    <h3 style="text-align: center; color: #111;">Check Your Marketing Success Score</h3>
+    <div id="quiz-container">
+        <div id="question-box" style="text-align: center; padding: 20px;">
+            <p id="question-text" style="font-size: 18px; font-weight: bold; color: #333;">Kya aapka business Google Maps par hai?</p>
+            <div style="margin-top: 20px;">
+                <button onclick="nextQuestion(20)" style="padding: 10px 30px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; margin-right: 10px;">Haan</button>
+                <button onclick="nextQuestion(0)" style="padding: 10px 30px; background: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer;">Nahi</button>
+            </div>
+        </div>
+    </div>
+    <div id="score-result" style="display:none; text-align: center; padding: 20px;">
+        <h2 style="color: #007bff;">Aapka Score: <span id="final-score">0</span>%</h2>
+        <p id="score-msg" style="color: #555;"></p>
+        <a href="tel:+91YOURNUMBER" style="display: inline-block; margin-top: 15px; padding: 12px 25px; background: #111; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">Free Audit Call Book Karein</a>
+    </div>
+</section>
+
+<script>
+    let currentStep = 0;
+    let totalScore = 0;
+    const questions = [
+        "Kya aapka business Google Maps par hai?",
+        "Kya aap Facebook/Instagram par ads chalate hain?",
+        "Kya aapke paas professional website hai?",
+        "Kya aap daily social media post karte hain?",
+        "Kya aapke paas verified leads ka data hai?"
+    ];
+
+    function nextQuestion(points) {
+        totalScore += points;
+        currentStep++;
+        if (currentStep < questions.length) {
+            document.getElementById('question-text').innerText = questions[currentStep];
+        } else {
+            document.getElementById('question-box').style.display = 'none';
+            document.getElementById('score-result').style.display = 'block';
+            document.getElementById('final-score').innerText = totalScore;
+            let msg = totalScore < 60 ? "Aapka business online piche hai! Ise grow karne ki zaroorat hai." : "Aap sahi raste par hain, lekin scale karne ke liye expert help chahiye!";
+            document.getElementById('score-msg').innerText = msg;
+        }
+    }
+</script>
 
     <section id="testimonials" class="testimonials">
         <h2 data-aos="fade-up">What Our Clients Say</h2>
@@ -176,6 +225,66 @@
                 <li>WhatsApp Support</li>
             </ul>
         </div>
+        <section style="max-width: 900px; width: 100%; margin: 50px auto; padding: 30px; background: #f9f9f9; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); font-family: sans-serif; box-sizing: border-box;">
+    
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h2 style="color: #1a1a1a; margin-bottom: 10px;">Grow Your Business with Ads</h2>
+        <p style="color: #666;">Calculate your estimated Daily Leads and Monthly Growth</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+        
+        <div style="background: #fff; padding: 20px; border-radius: 10px; border: 1px solid #eee;">
+            <label style="display: block; font-weight: bold; margin-bottom: 10px; color: #333;">Daily Ad Budget (₹)</label>
+            <input type="number" id="budget" value="500" oninput="calculateROI()" style="width: 100%; padding: 12px; border: 2px solid #007bff; border-radius: 8px; font-size: 16px; box-sizing: border-box; outline: none;">
+            
+            <label style="display: block; font-weight: bold; margin-top: 20px; margin-bottom: 10px; color: #333;">Lead Quality Type</label>
+            <select id="quality" onchange="calculateROI()" style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 8px; font-size: 16px; background: white;">
+                <option value="33.33" selected>Quality Leads (15 leads/day)</option>
+                <option value="100">Premium Real Estate (5 leads/day)</option>
+                <option value="166.66">Ultra-Premium Buyers (3 leads/day)</option>
+            </select>
+            <p style="font-size: 12px; color: #777; margin-top: 10px;">Monthly Budget: ₹<span id="monthly-budget">15000</span></p>
+        </div>
+
+        <div style="background: #007bff; color: white; padding: 25px; border-radius: 10px; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+            <p style="margin: 0; font-size: 14px; opacity: 0.9;">Estimated Daily Leads</p>
+            <h1 id="leads-output" style="margin: 10px 0; font-size: 48px;">15</h1>
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); width: 100%; margin: 15px 0;">
+            <p style="margin: 0; font-size: 14px; opacity: 0.9;">Monthly Lead Potential</p>
+            <h2 id="monthly-output" style="margin: 10px 0;">450</h2>
+        </div>
+
+    </div>
+
+    <p style="text-align: center; font-size: 12px; color: #999; margin-top: 20px;">*Based on ₹500/day strategy. High-quality leads for Delhi NCR businesses.</p>
+</section>
+
+<script>
+function calculateROI() {
+    let dailyBudget = document.getElementById('budget').value;
+    let costPerLead = document.getElementById('quality').value;
+    
+    if (dailyBudget > 0) {
+        // Daily Leads Calculation
+        let dailyLeads = Math.floor(dailyBudget / costPerLead);
+        document.getElementById('leads-output').innerText = dailyLeads;
+        
+        // Monthly Leads (Daily x 30)
+        document.getElementById('monthly-output').innerText = dailyLeads * 30;
+        
+        // Monthly Budget Show
+        document.getElementById('monthly-budget').innerText = dailyBudget * 30;
+        
+    } else {
+        document.getElementById('leads-output').innerText = "0";
+        document.getElementById('monthly-output').innerText = "0";
+        document.getElementById('monthly-budget').innerText = "0";
+    }
+}
+// Run once on load
+calculateROI();
+</script>
         <section style="padding: 60px 20px; background: #ffffff; font-family: 'Poppins', sans-serif;">
     <div style="max-width: 1100px; width: 100%; margin: auto; padding: 0 15px; box-sizing: border-box;">
         
