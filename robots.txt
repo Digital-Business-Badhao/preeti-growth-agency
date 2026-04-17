@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://digital-business-badhao.github.io/preeti-growth-agency/sitemap.xml
