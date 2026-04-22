@@ -290,6 +290,39 @@ img {
 /* ============================================================
    TESTIMONIALS
    ============================================================ */
+.rating-stars {
+    color: #ffcc00;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.google-verify {
+    font-size: 11px;
+    color: #4285F4;
+    margin-left: auto;
+    align-self: center;
+    font-weight: bold;
+}
+
+.google-verify i {
+    margin-right: 3px;
+}
+
+.more-reviews {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-trust {
+    color: #007bff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.testimonials {
+    padding: 80px 8%;
+    background-color: #f6f9fc;
+}
 .testimonials {
     padding: 80px 8%;
     background-color: #f6f9fc;
@@ -517,6 +550,26 @@ footer {
     margin-right: auto;
     line-height: 1.6;
 }
+ /* Footer Legal Links Styling */
+    .footer-bottom a {
+        color: #4285F4;
+        /* Blue color for links */
+        text-decoration: none;
+        transition: 0.3s;
+        font-weight: 500;
+    }
+
+    .footer-bottom a:hover {
+        color: #ffffff;
+        /* Hover karne par white ho jayega */
+        text-decoration: underline;
+    }
+
+    .disclaimer {
+        line-height: 1.6;
+        border-top: 1px solid #333;
+        padding-top: 10px;
+    }
 
 @media (max-width: 768px) {
     /* ✅ extra bottom padding so footer text clears the sticky bar */
