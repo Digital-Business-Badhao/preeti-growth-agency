@@ -1,4 +1,4 @@
-# 🚀 Digital Business Badhao | Preeti Koli
+# 🚀 Preeti Growth Agency | Digital Marketing Services Expert 
 ### Empowering Brands with Data-Driven Digital Marketing Solutions
 
 [![SEO Optimized](https://img.shields.io/badge/SEO-Optimized-success)](#)
