@@ -43,83 +43,77 @@ img {
 /* ============================================================
    NAVBAR
    ============================================================ */
-.navbar {
+v {
     display: flex;
     justify-content: space-between;
+    /* Logo left mein, Menu right mein */
     align-items: center;
-    padding: 15px 8%;
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    position: sticky;
+    padding: 15px 10%;
+    background: #fff;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* ✅ Single consolidated .agency-logo rule (was duplicated before) */
-.agency-logo {
-    width: 120px;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    display: block;
-    cursor: pointer;
-    padding: 5px;
-}
-
-@media (max-width: 600px) {
-    .agency-logo { width: 90px; }
-}
-
-.logo-text {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--dark);
-}
-
-.logo-text span { color: var(--primary); }
-
+/* Nav Links (Home, Services, etc.) */
 .nav-links {
-    list-style: none;
     display: flex;
+    list-style: none;
+    gap: 30px;
+    /* Links ke beech ki doori */
+    margin-left: auto;
+    /* Ye sabse zaroori hai: ye menu ko right side dhakelta hai */
 }
-
-.nav-links li { margin: 0 15px; }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--dark);
+    color: #333;
     font-weight: 500;
-    font-size: 15px;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
-.nav-links a:hover { color: var(--primary); }
+.nav-links a:hover {
+    color: #6c5ce7;
+    /* Aapka theme purple color */
+}
 
-.cta-btn {
-    padding: 10px 22px;
-    background: var(--secondary);
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn-primary {
+    padding: 12px 30px;
+    background: var(--gradient);
     color: white;
-    border-radius: 25px;
+    border-radius: 30px;
     text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
     font-weight: 600;
-    font-size: 14px;
-    transition: background 0.3s, transform 0.3s;
-    white-space: nowrap;
+    font-size: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.cta-btn:hover {
-    background: #00b5b5;
-    transform: scale(1.03);
+.btn-secondary {
+    padding: 12px 30px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+}
 /* ============================================================
    BUTTONS
    ============================================================ */
