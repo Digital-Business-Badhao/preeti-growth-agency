@@ -1,3 +1,18 @@
+# =============================================
+# robots.txt — Preeti Growth Agency
+# https://digital-business-badhao.github.io/preeti-growth-agency/
+# =============================================
+
+# Sab search engine crawlers ko allow karo
 User-agent: *
 Allow: /
+
+# Koi bhi page block nahi — sab index hona chahiye
+# (Agar future mein koi private page ho toh yahan add karna)
+# Disallow: /admin/
+
+# Sitemap ka location batao Google ko
 Sitemap: https://digital-business-badhao.github.io/preeti-growth-agency/sitemap.xml
+
+# Crawl delay — server load kam karne ke liye (optional)
+Crawl-delay: 1
