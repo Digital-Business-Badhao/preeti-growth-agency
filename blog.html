@@ -1,1218 +1,844 @@
 <!DOCTYPE html>
 <html lang="hi-IN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Growth Quiz | Apna Digital Score Jaano — Faridabad</title>
-  <meta name="description" content="Faridabad mein apna business grow karo. Yeh free 2-minute quiz lo, digital score jaano, aur Preeti Growth Agency se free audit aur strategy pao.">
-  <link rel="canonical" href="https://digital-business-badhao.github.io/preeti-growth-agency/blog-quiz.html">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-  <style>
-    /* ─── TOKENS ─── */
-    :root {
-      --bg:       #0b0c10;
-      --bg2:      #12131a;
-      --bg3:      #1a1b26;
-      --border:   rgba(255,255,255,.07);
-      --border2:  rgba(255,255,255,.13);
-      --text:     #e8e6f0;
-      --muted:    #8b89a0;
-      --accent:   #a78bfa;
-      --accent2:  #34d399;
-      --gold:     #fbbf24;
-      --danger:   #f87171;
-      --grad:     linear-gradient(135deg,#a78bfa,#34d399);
-      --grad2:    linear-gradient(135deg,#fbbf24,#f97316);
-      --r:        14px;
-      --r-lg:     22px;
-    }
-
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-
-    html { scroll-behavior:smooth; }
-
-    body {
-      font-family: 'Mulish', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-      line-height: 1.7;
-    }
-
-    /* ─── GRID TEXTURE ─── */
-    body::before {
-      content:'';
-      position:fixed; inset:0;
-      background-image:
-        linear-gradient(rgba(167,139,250,.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(167,139,250,.03) 1px, transparent 1px);
-      background-size: 44px 44px;
-      pointer-events:none; z-index:0;
-    }
-
-    /* ─── NAV ─── */
-    nav {
-      position:sticky; top:0; z-index:100;
-      display:flex; align-items:center; justify-content:space-between;
-      padding:16px 6%;
-      background:rgba(11,12,16,.85);
-      backdrop-filter:blur(18px);
-      border-bottom:1px solid var(--border);
-    }
-
-    .nav-logo {
-      font-family:'Playfair Display', serif;
-      font-size:17px; font-weight:900;
-      color:var(--text); text-decoration:none;
-      letter-spacing:-.3px;
-    }
-
-    .nav-logo span { color:var(--accent); }
-
-    .nav-right { display:flex; align-items:center; gap:12px; }
-
-    .nav-link {
-      font-size:13px; color:var(--muted);
-      text-decoration:none; transition:color .2s;
-    }
-    .nav-link:hover { color:var(--text); }
-
-    .nav-wa {
-      display:flex; align-items:center; gap:7px;
-      padding:8px 18px;
-      background:rgba(52,211,153,.12);
-      border:1px solid rgba(52,211,153,.25);
-      border-radius:30px;
-      color:#34d399; font-size:13px; font-weight:600;
-      text-decoration:none; transition:background .2s;
-    }
-    .nav-wa:hover { background:rgba(52,211,153,.2); }
-
-    /* ─── HERO / HOOK ─── */
-    .hero {
-      position:relative; z-index:1;
-      padding:90px 6% 70px;
-      text-align:center;
-      max-width:860px; margin:0 auto;
-    }
-
-    .hero-tag {
-      display:inline-flex; align-items:center; gap:8px;
-      background:rgba(167,139,250,.1);
-      border:1px solid rgba(167,139,250,.25);
-      border-radius:30px;
-      padding:6px 16px;
-      font-size:12px; font-weight:600; letter-spacing:.6px;
-      color:var(--accent); text-transform:uppercase;
-      margin-bottom:28px;
-    }
-
-    .hero-tag-dot {
-      width:6px; height:6px; border-radius:50%;
-      background:var(--accent2);
-      animation:blink 1.8s ease-in-out infinite;
-    }
-    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.3;} }
-
-    .hero h1 {
-      font-family:'Playfair Display', serif;
-      font-size:clamp(32px,5.5vw,62px);
-      font-weight:900; line-height:1.08;
-      color:#fff; margin-bottom:24px;
-      letter-spacing:-1.5px;
-    }
-
-    .hero h1 em {
-      font-style:italic;
-      background:var(--grad);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      background-clip:text;
-    }
-
-    .hero-sub {
-      font-size:17px; color:var(--muted);
-      max-width:600px; margin:0 auto 36px;
-      font-weight:400; line-height:1.75;
-    }
-
-    .hero-sub strong { color:var(--text); font-weight:600; }
-
-    .hero-cta-row {
-      display:flex; align-items:center; justify-content:center;
-      gap:12px; flex-wrap:wrap;
-    }
-
-    .btn-grad {
-      padding:14px 32px;
-      background:var(--grad);
-      color:#fff; font-weight:700; font-size:15px;
-      border-radius:40px; text-decoration:none; border:none; cursor:pointer;
-      font-family:'Mulish',sans-serif;
-      transition:opacity .2s, transform .2s;
-      display:inline-flex; align-items:center; gap:8px;
-    }
-    .btn-grad:hover { opacity:.88; transform:translateY(-2px); }
-
-    .btn-ghost {
-      padding:13px 28px;
-      background:transparent;
-      border:1px solid var(--border2);
-      color:var(--text); font-size:14px; font-weight:500;
-      border-radius:40px; text-decoration:none; cursor:pointer;
-      font-family:'Mulish',sans-serif;
-      transition:border-color .2s, background .2s;
-    }
-    .btn-ghost:hover { border-color:var(--accent); background:rgba(167,139,250,.07); }
-
-    /* scroll hint */
-    .scroll-hint {
-      margin-top:56px;
-      display:flex; flex-direction:column; align-items:center;
-      gap:8px; font-size:12px; color:var(--muted);
-      animation:bob 2s ease-in-out infinite;
-    }
-    @keyframes bob { 0%,100%{transform:translateY(0);} 50%{transform:translateY(6px);} }
-
-    /* ─── SECTION WRAPPER ─── */
-    .wrap {
-      position:relative; z-index:1;
-      max-width:900px; margin:0 auto;
-      padding:0 5%;
-    }
-
-    .section-label {
-      font-size:11px; font-weight:700; letter-spacing:1.2px;
-      text-transform:uppercase; color:var(--accent);
-      margin-bottom:12px;
-    }
-
-    .section-title {
-      font-family:'Playfair Display', serif;
-      font-size:clamp(26px,4vw,40px);
-      font-weight:900; color:#fff;
-      letter-spacing:-.8px; margin-bottom:14px; line-height:1.15;
-    }
-
-    .section-body {
-      font-size:16px; color:var(--muted);
-      line-height:1.8; margin-bottom:48px;
-      max-width:650px;
-    }
-
-    /* ─── DIVIDER ─── */
-    .divider {
-      height:1px; background:var(--border);
-      margin:72px auto; max-width:200px;
-    }
-
-    /* ─── INTRO ARTICLE BLOCK ─── */
-    .article-block {
-      background:var(--bg2);
-      border:1px solid var(--border);
-      border-radius:var(--r-lg);
-      padding:36px 40px;
-      margin-bottom:40px;
-    }
-
-    .article-block p {
-      font-size:16px; color:var(--muted);
-      line-height:1.85; margin-bottom:16px;
-    }
-    .article-block p:last-child { margin-bottom:0; }
-    .article-block strong { color:var(--text); }
-
-    .stat-inline {
-      display:inline-flex; align-items:center; gap:6px;
-      background:rgba(167,139,250,.1);
-      border:1px solid rgba(167,139,250,.2);
-      border-radius:8px;
-      padding:2px 10px;
-      font-size:14px; font-weight:700; color:var(--accent);
-    }
-
-    /* ─── QUIZ SECTION ─── */
-    #quiz-section {
-      padding:80px 0 60px;
-    }
-
-    /* Progress bar */
-    .progress-wrap {
-      background:var(--bg3); border-radius:4px; height:4px;
-      margin-bottom:36px; overflow:hidden;
-    }
-    .progress-bar {
-      height:100%; background:var(--grad);
-      border-radius:4px;
-      transition:width .5s cubic-bezier(.4,0,.2,1);
-    }
-
-    .quiz-meta {
-      display:flex; justify-content:space-between;
-      font-size:12px; color:var(--muted);
-      margin-bottom:8px;
-    }
-
-    /* Question card */
-    .q-card {
-      background:var(--bg2);
-      border:1px solid var(--border2);
-      border-radius:var(--r-lg);
-      padding:40px 36px;
-      animation:slideIn .4s cubic-bezier(.4,0,.2,1);
-    }
-    @keyframes slideIn {
-      from { opacity:0; transform:translateY(16px); }
-      to   { opacity:1; transform:translateY(0); }
-    }
-
-    .q-num {
-      font-size:11px; font-weight:700; letter-spacing:1px;
-      text-transform:uppercase; color:var(--accent);
-      margin-bottom:14px; display:block;
-    }
-
-    .q-text {
-      font-family:'Playfair Display', serif;
-      font-size:clamp(20px,3vw,28px);
-      font-weight:700; color:#fff; line-height:1.3;
-      margin-bottom:32px;
-    }
-
-    /* Options */
-    .options { display:flex; flex-direction:column; gap:12px; }
-
-    .opt {
-      display:flex; align-items:center; gap:16px;
-      background:var(--bg3);
-      border:1.5px solid var(--border);
-      border-radius:var(--r);
-      padding:16px 20px;
-      cursor:pointer;
-      transition:border-color .2s, background .2s, transform .15s;
-      position:relative; overflow:hidden;
-    }
-
-    .opt:hover {
-      border-color:var(--accent);
-      background:rgba(167,139,250,.07);
-      transform:translateX(4px);
-    }
-
-    .opt-letter {
-      width:34px; height:34px; border-radius:10px;
-      background:rgba(167,139,250,.1);
-      border:1px solid rgba(167,139,250,.2);
-      display:flex; align-items:center; justify-content:center;
-      font-size:13px; font-weight:700; color:var(--accent);
-      flex-shrink:0;
-      transition:background .2s, color .2s;
-    }
-
-    .opt-text { font-size:15px; color:var(--text); line-height:1.4; flex:1; }
-
-    .opt-pts {
-      font-size:11px; font-weight:700; color:var(--muted);
-      flex-shrink:0;
-    }
-
-    .opt.selected {
-      border-color:var(--accent2);
-      background:rgba(52,211,153,.08);
-    }
-    .opt.selected .opt-letter {
-      background:var(--accent2); color:#0b0c10;
-    }
-    .opt.selected .opt-pts { color:var(--accent2); }
-
-    /* Nav buttons */
-    .q-nav {
-      display:flex; justify-content:space-between; align-items:center;
-      margin-top:28px;
-    }
-
-    .q-back {
-      background:transparent;
-      border:1px solid var(--border2);
-      color:var(--muted); font-size:13px; font-weight:500;
-      padding:10px 20px; border-radius:30px; cursor:pointer;
-      font-family:'Mulish',sans-serif;
-      transition:border-color .2s, color .2s;
-    }
-    .q-back:hover { border-color:var(--accent); color:var(--accent); }
-    .q-back:disabled { opacity:.3; cursor:not-allowed; }
-
-    .q-next {
-      padding:12px 28px;
-      background:var(--grad);
-      color:#fff; font-size:14px; font-weight:700;
-      border:none; border-radius:30px; cursor:pointer;
-      font-family:'Mulish',sans-serif;
-      display:flex; align-items:center; gap:8px;
-      transition:opacity .2s, transform .2s;
-    }
-    .q-next:hover { opacity:.88; transform:translateY(-1px); }
-    .q-next:disabled { opacity:.35; cursor:not-allowed; }
-
-    /* ─── RESULT CARD ─── */
-    #result-section { display:none; padding:20px 0 60px; }
-
-    .result-card {
-      background:var(--bg2);
-      border:1px solid var(--border2);
-      border-radius:var(--r-lg);
-      padding:48px 40px;
-      text-align:center;
-      animation:slideIn .5s cubic-bezier(.4,0,.2,1);
-    }
-
-    .score-ring {
-      width:130px; height:130px; border-radius:50%;
-      background:conic-gradient(var(--accent) 0deg, var(--bg3) 0deg);
-      display:flex; align-items:center; justify-content:center;
-      margin:0 auto 28px;
-      position:relative;
-      transition:background 1s;
-    }
-
-    .score-ring-inner {
-      width:100px; height:100px; border-radius:50%;
-      background:var(--bg2);
-      display:flex; flex-direction:column; align-items:center; justify-content:center;
-    }
-
-    .score-num {
-      font-family:'Playfair Display', serif;
-      font-size:34px; font-weight:900; color:#fff;
-      line-height:1;
-    }
-
-    .score-max { font-size:12px; color:var(--muted); }
-
-    .result-badge {
-      display:inline-block;
-      padding:6px 20px; border-radius:30px;
-      font-size:13px; font-weight:700; letter-spacing:.4px;
-      margin-bottom:18px;
-    }
-
-    .result-badge.low    { background:rgba(248,113,113,.12); color:var(--danger); border:1px solid rgba(248,113,113,.25); }
-    .result-badge.mid    { background:rgba(251,191,36,.1);  color:var(--gold);   border:1px solid rgba(251,191,36,.25); }
-    .result-badge.high   { background:rgba(52,211,153,.1);  color:var(--accent2);border:1px solid rgba(52,211,153,.25); }
-
-    .result-title {
-      font-family:'Playfair Display', serif;
-      font-size:clamp(22px,4vw,32px);
-      font-weight:900; color:#fff; margin-bottom:14px;
-      line-height:1.2;
-    }
-
-    .result-msg { font-size:16px; color:var(--muted); max-width:520px; margin:0 auto 32px; line-height:1.75; }
-
-    /* Score table */
-    .score-table {
-      width:100%; border-collapse:collapse;
-      margin-bottom:36px; text-align:left;
-    }
-    .score-table th {
-      font-size:11px; font-weight:700; letter-spacing:.8px;
-      text-transform:uppercase; color:var(--muted);
-      padding:10px 16px;
-      border-bottom:1px solid var(--border);
-    }
-    .score-table td {
-      padding:14px 16px; font-size:14px; color:var(--text);
-      border-bottom:1px solid var(--border);
-    }
-    .score-table tr:last-child td { border-bottom:none; }
-    .score-table tr.active td { background:rgba(167,139,250,.06); }
-
-    .badge-pill {
-      display:inline-block; padding:3px 12px; border-radius:20px;
-      font-size:11px; font-weight:700;
-    }
-    .badge-pill.low  { background:rgba(248,113,113,.15); color:var(--danger); }
-    .badge-pill.mid  { background:rgba(251,191,36,.12);  color:var(--gold); }
-    .badge-pill.high { background:rgba(52,211,153,.12);  color:var(--accent2); }
-
-    .result-cta-row {
-      display:flex; gap:12px; justify-content:center; flex-wrap:wrap;
-      margin-bottom:16px;
-    }
-
-    .retry-btn {
-      background:transparent; border:1px solid var(--border2);
-      color:var(--muted); padding:11px 22px; border-radius:30px;
-      cursor:pointer; font-size:13px; font-family:'Mulish',sans-serif;
-      transition:border-color .2s, color .2s;
-    }
-    .retry-btn:hover { border-color:var(--accent); color:var(--accent); }
-
-    /* ─── SERVICES SECTION ─── */
-    #services-section { padding:80px 0; }
-
-    .services-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-      gap:18px; margin-top:40px;
-    }
-
-    .srv-card {
-      background:var(--bg2);
-      border:1px solid var(--border);
-      border-radius:var(--r-lg);
-      padding:32px 28px;
-      transition:border-color .25s, transform .25s, background .25s;
-      cursor:default;
-    }
-    .srv-card:hover {
-      border-color:rgba(167,139,250,.35);
-      background:rgba(167,139,250,.05);
-      transform:translateY(-5px);
-    }
-
-    .srv-icon {
-      width:52px; height:52px; border-radius:14px;
-      display:flex; align-items:center; justify-content:center;
-      font-size:22px; margin-bottom:20px;
-    }
-
-    .srv-icon.a { background:rgba(167,139,250,.12); color:var(--accent); }
-    .srv-icon.b { background:rgba(52,211,153,.1);   color:var(--accent2); }
-    .srv-icon.c { background:rgba(251,191,36,.1);   color:var(--gold); }
-    .srv-icon.d { background:rgba(248,113,113,.1);  color:var(--danger); }
-
-    .srv-title {
-      font-family:'Playfair Display', serif;
-      font-size:20px; font-weight:700; color:#fff;
-      margin-bottom:10px; letter-spacing:-.3px;
-    }
-
-    .srv-desc { font-size:14px; color:var(--muted); line-height:1.7; margin-bottom:18px; }
-
-    .srv-tag {
-      display:inline-block;
-      font-size:11px; font-weight:700; letter-spacing:.4px;
-      padding:4px 12px; border-radius:20px;
-    }
-    .srv-tag.a { background:rgba(167,139,250,.1); color:var(--accent); }
-    .srv-tag.b { background:rgba(52,211,153,.1);  color:var(--accent2); }
-    .srv-tag.c { background:rgba(251,191,36,.1);  color:var(--gold); }
-    .srv-tag.d { background:rgba(248,113,113,.1); color:var(--danger); }
-
-    /* ─── CTA BANNER ─── */
-    .cta-banner {
-      position:relative; z-index:1;
-      margin:0 5% 80px;
-      background:var(--bg2);
-      border:1px solid var(--border2);
-      border-radius:var(--r-lg);
-      padding:56px 48px;
-      text-align:center;
-      overflow:hidden;
-    }
-
-    .cta-banner::before {
-      content:'';
-      position:absolute; inset:0;
-      background:radial-gradient(ellipse at 50% 0%, rgba(167,139,250,.12) 0%, transparent 70%);
-      pointer-events:none;
-    }
-
-    .cta-banner h2 {
-      font-family:'Playfair Display', serif;
-      font-size:clamp(24px,4vw,40px);
-      font-weight:900; color:#fff;
-      margin-bottom:14px; letter-spacing:-.8px; line-height:1.15;
-    }
-
-    .cta-banner p { font-size:16px; color:var(--muted); max-width:500px; margin:0 auto 32px; }
-
-    .cta-banner .phone-big {
-      font-family:'Playfair Display', serif;
-      font-size:28px; font-weight:900; color:#fff;
-      letter-spacing:-1px; margin-bottom:28px;
-      display:block;
-    }
-
-    .cta-banner .phone-big span { color:var(--accent2); }
-
-    /* ─── FOOTER ─── */
-    footer {
-      background:var(--bg2);
-      border-top:1px solid var(--border);
-      padding:28px 6%;
-      display:flex; align-items:center; justify-content:space-between;
-      flex-wrap:wrap; gap:16px;
-    }
-
-    footer p { font-size:13px; color:var(--muted); }
-    footer a { color:var(--accent2); text-decoration:none; }
-
-    /* ─── WA FLOAT ─── */
-    .wa-float {
-      position:fixed; bottom:26px; right:26px;
-      width:54px; height:54px; border-radius:50%;
-      background:#25d366; color:#fff;
-      display:flex; align-items:center; justify-content:center;
-      font-size:24px; text-decoration:none;
-      box-shadow:0 6px 24px rgba(37,211,102,.4);
-      z-index:200; transition:transform .25s;
-    }
-    .wa-float:hover { transform:scale(1.1); }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width:700px) {
-      .hero { padding:60px 5% 48px; }
-      .article-block { padding:24px 22px; }
-      .q-card { padding:28px 22px; }
-      .result-card { padding:32px 22px; }
-      .cta-banner { padding:40px 24px; margin:0 4% 60px; }
-      footer { flex-direction:column; text-align:center; }
-    }
-  </style>
-  <!-- ✅ Robots -->
-  <meta name="robots" content="index, follow">
-
-  <!-- ✅ Open Graph — WhatsApp / Facebook preview -->
-  <meta property="og:type" content="article">
-  <meta property="og:title"       content="Business Growth Quiz — Apna Digital Score Jaano | Preeti Growth Agency">
-  <meta property="og:description" content="Kya aapka business digital duniya mein peeche hai? 2-minute quiz lo, score jaano, free audit pao. Faridabad ke #1 digital marketing experts.">
-  <meta property="og:image"       content="https://digital-business-badhao.github.io/preeti-growth-agency/og-image.png">
-  <meta property="og:url"         content="https://digital-business-badhao.github.io/preeti-growth-agency/blog-quiz.html">
-  <meta property="og:site_name"   content="Preeti Growth Agency">
-  <meta property="og:locale"      content="hi_IN">
-  <meta property="article:author"         content="Preeti Growth Agency">
-  <meta property="article:published_time" content="2026-04-22T00:00:00+05:30">
-  <meta property="article:section"        content="Digital Marketing">
-  <meta property="article:tag"            content="SEO, Meta Ads, Lead Generation, Faridabad, Digital Marketing">
-
-  <!-- ✅ Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Business Growth Quiz — Apna Digital Score Jaano">
-  <meta name="twitter:description" content="2 minutes mein jaano aapka business digital mein kahan hai. Free audit ke saath grow karo.">
-  <meta name="twitter:image"       content="https://digital-business-badhao.github.io/preeti-growth-agency/og-image.png">
-
-  <!-- ✅ Article (Blog Post) Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Business Growth Quiz — Aapka Business Digital Duniya Mein Kahan Khada Hai?",
-    "description": "Kya aapka business digital duniya mein peeche hai? Yeh interactive quiz lo aur apna digital marketing score jaano.",
-    "url": "https://digital-business-badhao.github.io/preeti-growth-agency/blog-quiz.html",
-    "datePublished": "2026-04-22",
-    "dateModified": "2026-04-22",
-    "inLanguage": "hi-IN",
-    "author": {
-      "@type": "Organization",
-      "name": "Preeti Growth Agency",
-      "url": "https://digital-business-badhao.github.io/preeti-growth-agency/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Preeti Growth Agency",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://digital-business-badhao.github.io/preeti-growth-agency/logo.png"
-      }
-    },
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://digital-business-badhao.github.io/preeti-growth-agency/og-image.png"
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://digital-business-badhao.github.io/preeti-growth-agency/blog-quiz.html"
-    }
-  }
-  </script>
-
-  <!-- ✅ FAQ Schema (Google FAQ rich results ke liye) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Kya sirf Facebook page se business grow ho sakta hai?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nahi. Sirf Facebook page hona kaafi nahi hai. Aapko SEO, Meta Ads, aur lead generation ki sahi strategy chahiye taaki aap apne competitors se aage rahen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Digital marketing mein ROI kaise track karein?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ek proper dashboard ke zariye — jisme daily leads count, ad spend, aur conversion rate clearly dikhe. Preeti Growth Agency weekly ROI report deti hai."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Meta Ads se leads kitne din mein aane lagte hain?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Campaign live hone ke 24 se 48 ghante ke andar leads aana shuru ho jati hain, agar targeting aur creative sahi ho."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Faridabad mein best digital marketing agency kaun si hai?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Preeti Growth Agency (Digital Business Badhao), Sector 30, Faridabad. SEO, Meta Ads, aur Real Estate lead generation mein specialization ke saath 50+ clients ko results de chuke hain."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- ✅ BreadcrumbList Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://digital-business-badhao.github.io/preeti-growth-agency/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://digital-business-badhao.github.io/preeti-growth-agency/blog-quiz.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Business Growth Quiz",
-        "item": "https://digital-business-badhao.github.io/preeti-growth-agency/blog-quiz.html"
-      }
-    ]
-  }
-  </script>
-
-  <!-- ✅ Quiz / Interactive Tool Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Quiz",
-    "name": "Business Growth Quiz — Digital Score Check",
-    "description": "5 sawaalon ka quiz jo batata hai aapka business digital duniya mein kahan khada hai.",
-    "url": "https://digital-business-badhao.github.io/preeti-growth-agency/blog-quiz.html",
-    "educationalLevel": "beginner",
-    "about": {
-      "@type": "Thing",
-      "name": "Digital Marketing"
-    }
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ✅ SEO: Title fixed (was "Business Growth Quiz") -->
+<title>Digital Marketing Blog Faridabad | SEO, Meta Ads & Lead Gen Tips | Preeti Growth Agency</title>
+<meta name="description" content="Faridabad ke businesses ke liye free digital marketing tips — Local SEO, Meta Ads, Google My Business aur Lead Generation strategies. Preeti Growth Agency ka official blog. Call: +91 83838 55004">
+<meta name="keywords" content="digital marketing blog Faridabad, SEO tips Hindi, Meta Ads guide, local SEO Faridabad, business growth tips Delhi NCR, lead generation Faridabad, digital marketing expert near me">
+<meta name="author" content="Preeti — Preeti Growth Agency">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#6c5ce7">
+
+<!-- ✅ CANONICAL FIXED: was "blog-quiz.html" (404!) -->
+<link rel="canonical" href="https://digital-business-badhao.github.io/preeti-growth-agency/blog.html">
+<link rel="sitemap" type="application/xml" href="https://digital-business-badhao.github.io/preeti-growth-agency/sitemap.xml">
+
+<!-- ✅ OG FIXED: image was "og-image.png" (doesn't exist), url was "blog-quiz.html" -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Digital Marketing Blog | Preeti Growth Agency Faridabad">
+<meta property="og:description" content="Free SEO tips, Meta Ads guide & lead generation strategies for Faridabad & Delhi NCR businesses.">
+<meta property="og:image" content="https://digital-business-badhao.github.io/preeti-growth-agency/hero.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://digital-business-badhao.github.io/preeti-growth-agency/blog.html">
+<meta property="og:site_name" content="Preeti Growth Agency">
+<meta property="og:locale" content="hi_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digital Marketing Blog | Preeti Growth Agency Faridabad">
+<meta name="twitter:image" content="https://digital-business-badhao.github.io/preeti-growth-agency/hero.png">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="192x192" href="android-chrome-192x192.png">
+
+<!-- ✅ SCHEMA: All URLs fixed from blog-quiz.html → blog.html -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://digital-business-badhao.github.io/preeti-growth-agency/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://digital-business-badhao.github.io/preeti-growth-agency/blog.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Blog",
+  "name":"Preeti Growth Agency Digital Marketing Blog",
+  "url":"https://digital-business-badhao.github.io/preeti-growth-agency/blog.html",
+  "description":"Digital marketing tips for Faridabad businesses — SEO, Meta Ads, Lead Generation",
+  "inLanguage":"hi-IN",
+  "publisher":{"@type":"Organization","name":"Preeti Growth Agency","logo":{"@type":"ImageObject","url":"https://digital-business-badhao.github.io/preeti-growth-agency/logo.png"}},
+  "blogPost":[
+    {"@type":"BlogPosting","headline":"Facebook Page Hona Kaafi Nahi — Aapko Strategy Chahiye","url":"https://digital-business-badhao.github.io/preeti-growth-agency/blog.html","datePublished":"2026-04-01","dateModified":"2026-04-30","author":{"@type":"Person","name":"Preeti"}},
+    {"@type":"BlogPosting","headline":"Google My Business Se Faridabad Mein Top 3 Rank Kaise Karein 2026","url":"https://digital-business-badhao.github.io/preeti-growth-agency/blog2.html","datePublished":"2026-04-10","author":{"@type":"Person","name":"Preeti"}},
+    {"@type":"BlogPosting","headline":"Faridabad Mein Digital Marketing Se Business Kaise Badhayein?","url":"https://digital-business-badhao.github.io/preeti-growth-agency/blog3.html","datePublished":"2026-04-15","author":{"@type":"Person","name":"Preeti"}},
+    {"@type":"BlogPosting","headline":"Real Estate Ke Liye Meta Ads — Verified Leads Ka Formula","url":"https://digital-business-badhao.github.io/preeti-growth-agency/blog4.html","datePublished":"2026-04-20","author":{"@type":"Person","name":"Preeti"}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Faridabad mein best digital marketing agency kaun si hai?","acceptedAnswer":{"@type":"Answer","text":"Preeti Growth Agency, Sector 30 Faridabad — SEO, Meta Ads aur Real Estate lead generation mein specialist. 50+ clients ko proven results de chuke hain."}},
+    {"@type":"Question","name":"Meta Ads se leads kitne din mein aate hain?","acceptedAnswer":{"@type":"Answer","text":"Campaign live hone ke 24-48 ghante mein leads aana shuru ho jaati hain agar targeting aur creative sahi ho."}},
+    {"@type":"Question","name":"Kya sirf Facebook page se business grow hota hai?","acceptedAnswer":{"@type":"Answer","text":"Nahi. SEO, Meta Ads aur lead generation ki sahi strategy chahiye competitors se aage rehne ke liye."}},
+    {"@type":"Question","name":"Digital marketing ka budget kitna hona chahiye?","acceptedAnswer":{"@type":"Answer","text":"₹5,000/month se shuruat ho sakti hai. ₹500/day ke Meta Ads budget se 10-15 leads daily mil sakti hain."}}
+  ]
+}
+</script>
+
+<!-- SAME FONTS AS INDEX.HTML -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+/* ═══════════════════════════════════════
+   EXACT MATCH: index.html theme
+   White bg · Purple #6c5ce7 · Poppins
+═══════════════════════════════════════ */
+:root{
+  --purple:#6c5ce7;
+  --purple-dark:#5a4bd1;
+  --teal:#00cec9;
+  --dark:#1a1a1a;
+  --gray:#555;
+  --light:#f8f9ff;
+  --border:#e8e8f0;
+  --shadow:0 4px 20px rgba(108,92,231,.12);
+  --shadow-lg:0 10px 40px rgba(108,92,231,.2);
+  --r:12px;
+  --r-lg:20px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;background:#fff;color:var(--dark);overflow-x:hidden;line-height:1.7;}
+
+/* ── NAVBAR: identical to index ── */
+.navbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:15px 8%;background:#fff;
+  position:sticky;top:0;width:100%;z-index:1000;
+  box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+.nav-logo img{height:40px;}
+.nav-links{display:flex;list-style:none;gap:25px;margin:0;padding:0;}
+.nav-links a{text-decoration:none;color:#333;font-weight:500;font-size:14px;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--purple);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{display:block;width:24px;height:2px;background:#333;border-radius:2px;transition:all .3s;}
+
+/* ── BREADCRUMB ── */
+.breadcrumb{padding:10px 8%;background:var(--light);border-bottom:1px solid var(--border);}
+.breadcrumb ol{display:flex;gap:8px;align-items:center;list-style:none;font-size:12px;color:var(--gray);}
+.breadcrumb a{color:var(--purple);text-decoration:none;}
+.breadcrumb a:hover{text-decoration:underline;}
+
+/* ── HERO: same style as index hero ── */
+.hero{
+  background:linear-gradient(135deg,#f3f0ff 0%,#fff 50%,#f0fffe 100%);
+  padding:72px 8% 56px;text-align:center;
+  border-bottom:1px solid var(--border);
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-80px;right:-80px;
+  width:320px;height:320px;border-radius:50%;
+  background:radial-gradient(circle,rgba(108,92,231,.08),transparent 70%);
+  pointer-events:none;
+}
+.hero-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(108,92,231,.1);border:1px solid rgba(108,92,231,.2);
+  border-radius:30px;padding:6px 16px;
+  font-size:11px;font-weight:700;letter-spacing:.6px;
+  color:var(--purple);text-transform:uppercase;margin-bottom:20px;
+}
+.pill-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:blink 1.8s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.25;}}
+.hero h1{font-size:clamp(28px,4.5vw,52px);font-weight:800;color:var(--dark);line-height:1.15;margin-bottom:16px;letter-spacing:-1.2px;}
+.hero h1 span{color:var(--purple);}
+.hero p{font-size:16px;color:var(--gray);max-width:560px;margin:0 auto 28px;line-height:1.8;}
+.hero-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;}
+
+/* ── BUTTONS: exact index style ── */
+.btn-primary{
+  padding:13px 28px;background:var(--purple);color:#fff;
+  font-weight:600;font-size:14px;border-radius:8px;
+  text-decoration:none;border:none;cursor:pointer;
+  font-family:'Poppins',sans-serif;
+  transition:background .25s,transform .2s,box-shadow .2s;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.btn-primary:hover{background:var(--purple-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(108,92,231,.35);}
+.btn-secondary{
+  padding:12px 24px;background:transparent;
+  border:2px solid var(--purple);color:var(--purple);
+  font-weight:600;font-size:14px;border-radius:8px;
+  text-decoration:none;font-family:'Poppins',sans-serif;
+  transition:all .2s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-secondary:hover{background:var(--purple);color:#fff;transform:translateY(-2px);}
+.btn-wa{
+  padding:13px 28px;background:#25d366;color:#fff;
+  font-weight:600;font-size:14px;border-radius:8px;
+  text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+  font-family:'Poppins',sans-serif;
+  transition:background .2s,transform .2s;border:none;cursor:pointer;
+}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-2px);}
+
+/* ── STATS BAR ── */
+.stats-bar{display:flex;flex-wrap:wrap;background:#fff;border-bottom:1px solid var(--border);}
+.stat-item{flex:1;min-width:130px;padding:20px 16px;text-align:center;border-right:1px solid var(--border);}
+.stat-item:last-child{border-right:none;}
+.stat-num{font-size:26px;font-weight:800;color:var(--purple);display:block;line-height:1;}
+.stat-label{font-size:12px;color:var(--gray);margin-top:4px;display:block;}
+
+/* ── SECTIONS ── */
+.section{padding:64px 8%;}
+.section-alt{background:var(--light);}
+.sec-tag{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--purple);margin-bottom:8px;display:block;}
+.sec-title{font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--dark);margin-bottom:10px;letter-spacing:-0.5px;line-height:1.2;}
+.sec-sub{font-size:15px;color:var(--gray);margin-bottom:36px;max-width:560px;line-height:1.75;}
+
+/* ── SERVICE CARDS: same as index ── */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;}
+.service-card{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:28px 24px;text-align:center;
+  transition:box-shadow .25s,transform .2s,border-color .2s;
+}
+.service-card:hover{box-shadow:var(--shadow);transform:translateY(-5px);border-color:rgba(108,92,231,.25);}
+.service-icon{
+  width:56px;height:56px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;margin:0 auto 16px;
+}
+.si-purple{background:rgba(108,92,231,.1);color:var(--purple);}
+.si-teal{background:rgba(0,206,201,.1);color:var(--teal);}
+.si-green{background:rgba(0,184,148,.1);color:#00b894;}
+.si-pink{background:rgba(253,121,168,.1);color:#fd79a8;}
+.service-card h3{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;}
+.service-card p{font-size:13px;color:var(--gray);line-height:1.6;}
+
+/* ── BLOG CARDS ── */
+.featured-wrap{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:var(--shadow);margin-bottom:28px;
+  text-decoration:none;background:#fff;
+  border:1px solid var(--border);
+  transition:box-shadow .25s,transform .2s;
+}
+.featured-wrap:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);}
+.feat-visual{
+  background:linear-gradient(135deg,var(--purple),#a78bfa);
+  min-height:280px;display:flex;align-items:center;
+  justify-content:center;font-size:72px;position:relative;
+}
+.feat-badge-pill{
+  position:absolute;top:18px;left:18px;
+  background:#fbbf24;color:#111;
+  font-size:10px;font-weight:800;letter-spacing:1.5px;
+  padding:4px 12px;border-radius:20px;text-transform:uppercase;
+}
+.feat-content{padding:36px 30px;display:flex;flex-direction:column;justify-content:center;}
+.blog-chip{
+  display:inline-block;font-size:10px;font-weight:700;
+  letter-spacing:.5px;text-transform:uppercase;
+  padding:4px 12px;border-radius:20px;margin-bottom:14px;
+}
+.chip-seo{background:rgba(108,92,231,.1);color:var(--purple);}
+.chip-ads{background:rgba(0,206,201,.1);color:var(--teal);}
+.chip-gmb{background:rgba(234,67,53,.08);color:#ea4335;}
+.chip-leads{background:rgba(251,191,36,.12);color:#d97706;}
+.feat-content h2{font-size:clamp(17px,2.2vw,23px);font-weight:700;color:var(--dark);margin-bottom:12px;line-height:1.3;}
+.feat-content p{font-size:13px;color:var(--gray);line-height:1.75;margin-bottom:22px;}
+.read-more-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--purple);transition:gap .2s;}
+.featured-wrap:hover .read-more-link{gap:10px;}
+
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;}
+.blog-card{
+  background:#fff;border:1px solid var(--border);
+  border-radius:var(--r-lg);overflow:hidden;
+  text-decoration:none;display:block;
+  transition:box-shadow .25s,transform .2s;
+}
+.blog-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-5px);}
+.card-thumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:48px;}
+.thumb-purple{background:linear-gradient(135deg,#5a4bd1,#a78bfa);}
+.thumb-teal{background:linear-gradient(135deg,#00cec9,#74b9ff);}
+.thumb-green{background:linear-gradient(135deg,#00b894,#55efc4);}
+.thumb-orange{background:linear-gradient(135deg,#fd79a8,#e17055);}
+.card-body{padding:20px 22px;}
+.card-body h3{font-size:15px;font-weight:700;color:var(--dark);margin:10px 0 8px;line-height:1.35;}
+.card-body p{font-size:13px;color:var(--gray);line-height:1.65;margin-bottom:14px;}
+.card-footer-row{display:flex;justify-content:space-between;align-items:center;}
+.card-date{font-size:11px;color:#aaa;}
+.card-read{font-size:12px;font-weight:700;color:var(--purple);display:flex;align-items:center;gap:4px;transition:gap .2s;}
+.blog-card:hover .card-read{gap:8px;}
+
+/* ── QUIZ: same card style as index ── */
+.quiz-section{padding:64px 8%;background:var(--light);}
+.quiz-card{
+  background:#fff;border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:44px 40px;
+  max-width:820px;margin:0 auto;
+  box-shadow:var(--shadow);position:relative;overflow:hidden;
+}
+.quiz-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--purple),var(--teal));}
+.quiz-title{font-size:clamp(20px,2.8vw,30px);font-weight:800;color:var(--dark);margin-bottom:5px;}
+.quiz-sub{font-size:13px;color:var(--gray);margin-bottom:26px;}
+.prog-track{background:#f0f0f5;border-radius:4px;height:5px;overflow:hidden;margin-bottom:8px;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--purple),var(--teal));border-radius:4px;transition:width .5s cubic-bezier(.4,0,.2,1);}
+.quiz-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--gray);margin-bottom:24px;}
+.q-block{animation:slideUp .35s ease;}
+@keyframes slideUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.q-num{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--purple);margin-bottom:10px;display:block;}
+.q-text{font-size:clamp(16px,2.2vw,22px);font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:22px;}
+.options-list{display:flex;flex-direction:column;gap:10px;}
+.option{
+  display:flex;align-items:center;gap:14px;
+  background:#f8f8fd;border:2px solid var(--border);
+  border-radius:var(--r);padding:13px 16px;cursor:pointer;
+  transition:border-color .2s,background .2s,transform .15s;user-select:none;
+}
+.option:hover{border-color:var(--purple);background:rgba(108,92,231,.05);transform:translateX(4px);}
+.option.picked{border-color:var(--teal);background:rgba(0,206,201,.06);}
+.opt-key{
+  width:32px;height:32px;border-radius:8px;
+  background:rgba(108,92,231,.1);border:1px solid rgba(108,92,231,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;color:var(--purple);flex-shrink:0;transition:all .2s;
+}
+.option.picked .opt-key{background:var(--teal);color:#fff;border-color:var(--teal);}
+.opt-label{font-size:14px;color:var(--dark);flex:1;line-height:1.4;}
+.opt-score{font-size:11px;font-weight:700;color:#bbb;flex-shrink:0;}
+.option.picked .opt-score{color:var(--teal);}
+.q-buttons{display:flex;justify-content:space-between;align-items:center;margin-top:22px;}
+.btn-back-q{
+  background:transparent;border:2px solid var(--border);
+  color:var(--gray);font-size:13px;font-weight:600;
+  padding:10px 20px;border-radius:8px;cursor:pointer;
+  font-family:'Poppins',sans-serif;transition:all .2s;
+}
+.btn-back-q:hover{border-color:var(--purple);color:var(--purple);}
+.btn-back-q:disabled{opacity:.3;cursor:not-allowed;}
+.btn-next-q{
+  padding:11px 26px;background:var(--purple);color:#fff;
+  font-size:14px;font-weight:700;border:none;border-radius:8px;
+  cursor:pointer;font-family:'Poppins',sans-serif;
+  display:flex;align-items:center;gap:8px;
+  transition:background .2s,transform .2s,box-shadow .2s;
+}
+.btn-next-q:hover{background:var(--purple-dark);transform:translateY(-1px);box-shadow:0 4px 16px rgba(108,92,231,.35);}
+.btn-next-q:disabled{opacity:.35;cursor:not-allowed;transform:none;box-shadow:none;}
+
+/* RESULT */
+#resultBox{display:none;}
+.result-center{text-align:center;padding:8px 0;}
+.score-donut{
+  width:120px;height:120px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;
+}
+.score-inner{
+  width:90px;height:90px;border-radius:50%;background:#fff;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 2px 12px rgba(0,0,0,.1);
+}
+.score-pct{font-size:26px;font-weight:800;color:var(--dark);line-height:1;}
+.score-lbl{font-size:10px;color:var(--gray);}
+.res-badge{display:inline-block;padding:5px 18px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:.3px;margin-bottom:14px;}
+.rb-low{background:rgba(231,76,60,.1);color:#e74c3c;border:1px solid rgba(231,76,60,.2);}
+.rb-mid{background:rgba(243,156,18,.1);color:#d97706;border:1px solid rgba(243,156,18,.2);}
+.rb-high{background:rgba(0,206,201,.1);color:var(--teal);border:1px solid rgba(0,206,201,.2);}
+.res-title{font-size:clamp(18px,2.5vw,26px);font-weight:800;color:var(--dark);margin-bottom:10px;}
+.res-msg{font-size:14px;color:var(--gray);max-width:440px;margin:0 auto 24px;line-height:1.75;}
+.res-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-retry{
+  background:transparent;border:2px solid var(--border);
+  color:var(--gray);padding:10px 20px;border-radius:8px;
+  cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s;
+}
+.btn-retry:hover{border-color:var(--purple);color:var(--purple);}
+
+/* ── TESTIMONIALS: same as index ── */
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;}
+.testi-card{
+  background:#fff;border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:26px;
+  transition:box-shadow .25s,transform .2s;
+}
+.testi-card:hover{box-shadow:var(--shadow);transform:translateY(-4px);}
+.testi-stars{color:#fbbf24;font-size:14px;margin-bottom:12px;letter-spacing:2px;}
+.testi-quote{font-size:13px;color:var(--gray);line-height:1.75;margin-bottom:18px;font-style:italic;}
+.testi-author{display:flex;align-items:center;gap:12px;}
+.author-avatar{
+  width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(135deg,var(--purple),var(--teal));
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;color:#fff;flex-shrink:0;
+}
+.author-name{font-size:14px;font-weight:700;color:var(--dark);}
+.author-role{font-size:11px;color:var(--gray);}
+
+/* ── CTA BANNER: same gradient as index buttons ── */
+.cta-section{
+  background:linear-gradient(135deg,var(--purple) 0%,#a78bfa 100%);
+  padding:64px 8%;text-align:center;color:#fff;
+}
+.cta-section h2{font-size:clamp(22px,3.5vw,38px);font-weight:800;margin-bottom:12px;letter-spacing:-0.5px;}
+.cta-section p{font-size:15px;opacity:.9;max-width:480px;margin:0 auto 22px;line-height:1.75;}
+.cta-phone{font-size:28px;font-weight:800;display:block;margin-bottom:26px;letter-spacing:-0.5px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-white{
+  padding:13px 28px;background:#fff;color:var(--purple);
+  font-weight:700;font-size:14px;border-radius:8px;
+  text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+  transition:transform .2s,box-shadow .2s;
+}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.2);}
+.btn-outline-w{
+  padding:12px 24px;background:transparent;
+  border:2px solid rgba(255,255,255,.6);color:#fff;
+  font-weight:600;font-size:14px;border-radius:8px;
+  text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+  transition:all .2s;
+}
+.btn-outline-w:hover{background:rgba(255,255,255,.15);border-color:#fff;}
+
+/* ── FOOTER: exact index ── */
+footer{
+  background:#111;color:#fff;
+  padding:36px 8%;
+}
+.footer-inner{
+  display:flex;flex-wrap:wrap;gap:30px;
+  justify-content:space-between;align-items:flex-start;
+  margin-bottom:24px;
+}
+.footer-brand .brand-name{font-size:20px;font-weight:700;letter-spacing:1px;margin-bottom:10px;}
+.footer-brand .brand-name span{color:#6c5ce7;}
+.footer-brand p{font-size:13px;color:#aaa;max-width:320px;line-height:1.65;}
+.footer-links h4{font-size:13px;font-weight:700;color:#fff;margin-bottom:12px;}
+.footer-links ul{list-style:none;}
+.footer-links li{margin-bottom:8px;}
+.footer-links a{font-size:13px;color:#aaa;text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--teal);}
+.footer-social{display:flex;gap:14px;margin-top:16px;}
+.social-icon{
+  width:36px;height:36px;border-radius:8px;
+  background:rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:center;
+  color:#aaa;text-decoration:none;font-size:15px;
+  transition:background .2s,color .2s;
+}
+.social-icon:hover{background:var(--purple);color:#fff;}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:20px;
+  display:flex;flex-wrap:wrap;gap:12px;
+  justify-content:space-between;align-items:center;
+}
+.footer-bottom p{font-size:13px;color:#777;}
+.footer-bottom a{color:#aaa;text-decoration:none;}
+.footer-bottom a:hover{color:var(--teal);}
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float{
+  position:fixed;bottom:26px;right:26px;
+  width:54px;height:54px;border-radius:50%;
+  background:#25d366;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;text-decoration:none;
+  box-shadow:0 6px 24px rgba(37,211,102,.4);
+  z-index:200;transition:transform .25s,box-shadow .25s;
+}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.55);}
+
+/* ── MOBILE STICKY BAR ── */
+.mob-bar{display:none;position:fixed;bottom:0;left:0;width:100%;z-index:199;}
+.mob-bar a{flex:1;text-align:center;padding:14px 10px;font-weight:700;font-size:15px;text-decoration:none;color:#fff;font-family:'Poppins',sans-serif;}
+.mob-call{background:var(--purple);}
+.mob-wa{background:#25d366;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .navbar{padding:12px 5%;}
+  .nav-links{display:none;position:fixed;top:66px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 5%;gap:16px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:999;}
+  .nav-links.open{display:flex;}
+  .hamburger{display:flex;}
+  .featured-wrap{grid-template-columns:1fr;}
+  .feat-visual{min-height:180px;}
+  .hero,.section,.quiz-section,.cta-section{padding-left:5%;padding-right:5%;}
+  footer{padding:30px 5%;}
+  .wa-float{bottom:82px;}
+  .mob-bar{display:flex;}
+  .stats-bar{flex-direction:column;}
+  .stat-item{border-right:none;border-bottom:1px solid var(--border);}
+  .stat-item:last-child{border-bottom:none;}
+  .quiz-card{padding:28px 20px;}
+  .footer-inner{flex-direction:column;gap:24px;}
+}
+@media(max-width:480px){
+  .hero h1{letter-spacing:-.5px;}
+  .blog-grid{grid-template-columns:1fr;}
+}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-logo">PREETI <span>GROWTH</span></a>
-  <div class="nav-right">
-    <a href="index.html" class="nav-link"><i class="fas fa-arrow-left"></i> Home</a>
-    <a href="https://wa.me/918383855004" class="nav-wa" target="_blank" rel="noopener">
-      <i class="fab fa-whatsapp"></i> Free Audit
+<!-- ── NAVBAR: exact same as index.html ── -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-logo">
+    <a href="index.html" aria-label="Preeti Growth Agency Home">
+      <img src="logo.png" alt="Preeti Growth Agency Logo">
     </a>
   </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#testimonials">Clients</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="blog.html" class="active" aria-current="page">Blog</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<!-- ✅ Breadcrumb navigation (visible + SEO) -->
-<div style="position:relative;z-index:1;padding:10px 6%;background:transparent;">
-  <nav aria-label="breadcrumb">
-    <ol style="display:flex;gap:6px;align-items:center;list-style:none;font-size:12px;color:#8b89a0;flex-wrap:wrap;">
-      <li><a href="index.html" style="color:#a78bfa;text-decoration:none;">Home</a></li>
-      <li style="opacity:.4;">/</li>
-      <li><a href="index.html#services" style="color:#a78bfa;text-decoration:none;">Blog</a></li>
-      <li style="opacity:.4;">/</li>
-      <li style="color:#e8e6f0;" aria-current="page">Business Growth Quiz</li>
-    </ol>
-  </nav>
-</div>
+<!-- ── BREADCRUMB ── -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="index.html">Home</a></li>
+    <li style="opacity:.5;margin:0 6px;" aria-hidden="true">/</li>
+    <li aria-current="page">Blog</li>
+  </ol>
+</nav>
 
-<!-- ═══════════════════════════════════════════════
-     SECTION 1 — HERO / HOOK
-═══════════════════════════════════════════════ -->
-<section class="hero">
-  <div class="hero-tag">
-    <span class="hero-tag-dot"></span>
-    2-Minute Quiz · Free Audit
+<!-- ── HERO ── -->
+<header class="hero">
+  <div class="hero-pill">
+    <span class="pill-dot"></span>
+    Digital Marketing Tips · Faridabad &amp; Delhi NCR
   </div>
-
-  <h1>
-    Aapka Business<br>
-    Digital Duniya Mein<br>
-    <em>Kahan Khada Hai?</em>
-  </h1>
-
-  <p class="hero-sub">
-    Aaj ke daur mein sirf ek Facebook page hona kaafi nahi hai.
-    <strong>Sahi strategy ke bina, aap apne competitors se peeche rah jaate hain.</strong>
-    Yeh quiz lo, apna score jaano, aur ek free action plan pao.
+  <h1>Business Ko <span>Digital Mein</span><br>Aage Badhao</h1>
+  <p>Free SEO tips, Meta Ads guides aur lead generation strategies —
+    <strong>sirf Faridabad &amp; Delhi NCR ke businesses ke liye.</strong>
+    Actionable advice jo aaj se implement kar sako.
   </p>
-
-  <div class="hero-cta-row">
-    <a href="#quiz-section" class="btn-grad">
-      <i class="fas fa-play"></i> Quiz Start Karein
-    </a>
-    <a href="https://wa.me/918383855004" class="btn-ghost" target="_blank" rel="noopener">
-      <i class="fab fa-whatsapp"></i> Direct Baat Karein
-    </a>
+  <div class="hero-btns">
+    <a href="#articles" class="btn-primary"><i class="fas fa-book-open"></i> Articles Padhein</a>
+    <a href="#quiz" class="btn-secondary"><i class="fas fa-star"></i> Score Check Karo</a>
   </div>
+</header>
 
-  <div class="scroll-hint">
-    <span>Scroll karo</span>
-    <i class="fas fa-chevron-down"></i>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════
-     SECTION 2 — INTRO ARTICLE
-═══════════════════════════════════════════════ -->
-  
-  /* All bLOGS LINK */
-  <section class="blog-archive" style="padding: 100px 8% 50px;">
-    <h1 style="text-align: center; margin-bottom: 40px;">Digital Marketing Insights</h1>
-
-    <div class="blog-grid"
-      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-
-      <div class="blog-card"
-        style="border: 1px solid #eee; border-radius: 12px; overflow: hidden; background: #fff; transition: 0.3s;">
-        <div
-          style="height: 180px; background: #6c5ce7; display: flex; align-items: center; justify-content: center; color: white;">
-          <i class="fas fa-bullhorn" style="font-size: 40px;"></i>
-        </div>
-        <div style="padding: 20px;">
-          <h3 style="margin-bottom: 10px;">Google My Business Se Faridabad Mein Top 3 Rank Kaise Karein 2026? (Ultimate
-            Guide) </h3>
-          <p style="font-size: 14px; color: #666;">ab tak 50 se zyada local businesses (Real Estate, Finance, aur
-            Clinics) ki GMB profiles ko optimize karke unhe Faridabad ke Top 3 'Local Pack'
-            mein laya hai....</p>
-          <a href="blog2.html"
-            style="display: inline-block; margin-top: 15px; color: #6c5ce7; font-weight: bold; text-decoration: none;">Read
-            More →</a>
-        </div>
-      </div>
-
-      <div class="blog-card"
-        style="border: 1px solid #eee; border-radius: 12px; overflow: hidden; background: #fff; transition: 0.3s;">
-        <div
-          style="height: 180px; background: #00cec9; display: flex; align-items: center; justify-content: center; color: white;">
-          <i class="fas fa-chart-line" style="font-size: 40px;"></i>
-        </div>
-        <div style="padding: 20px;">
-          <h3 style="margin-bottom: 10px;">Faridabad Mein Digital Marketing Se Business Kaise Badhayein? (2025 Ki
-            Complete Guide)</h3>
-          <p style="font-size: 14px; color: #666;">Faridabad ke businesses ke liye Google Page 1 par aane ke tips...</p>
-          <a href="blog3.html"
-            style="display: inline-block; margin-top: 15px; color: #6c5ce7; font-weight: bold; text-decoration: none;">Read
-            More →</a>
-        </div>
-      </div>
-
-      <div class="blog-card"
-        style="border: 1px solid #eee; border-radius: 12px; overflow: hidden; background: #fff; transition: 0.3s;">
-        <div
-          style="height: 180px; background: #25d366; display: flex; align-items: center; justify-content: center; color: white;">
-          <i class="fab fa-whatsapp" style="font-size: 40px;"></i>
-        </div>
-        <div style="padding: 20px;">
-          <h3 style="margin-bottom: 10px;">Real Estate Business Ke Liye Meta Ads — Verified Leads Paane Ka Complete Formula 2025</h3>
-          <p style="font-size: 14px; color: #666;">Apne business Ko Social Media Leads generate Kare Poora Article Padhein aur Strategy Seekhein....</p>
-          <a href="blog4.html"
-            style="display: inline-block; margin-top: 15px; color: #6c5ce7; font-weight: bold; text-decoration: none;">Read
-            More →</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-<section style="padding:60px 0 0; position:relative; z-index:1;">
-  <div class="wrap">
-
-    <div class="section-label">Blog · Digital Strategy</div>
-    <h2 class="section-title">Facebook Page Hona Kaafi Nahi —<br>Aapko Strategy Chahiye</h2>
-    <p class="section-body">
-      Agar aap sirf posts daal rahe hain aur leads nahi aa rahi, toh problem content mein nahi — <strong>strategy mein hai.</strong>
-    </p>
-
-    <div class="article-block">
-      <p>
-        India mein abhi <span class="stat-inline"><i class="fas fa-users"></i> 80+ crore</span> internet users hain.
-        Aur inme se zyada tar apne phone pe business dhundhte hain — Google par, Instagram par, aur WhatsApp par.
-        Agar aapka business wahan nahi dikha, toh aapka potential customer kisi competitor ke paas ja raha hai.
-      </p>
-      <p>
-        <strong>Digital marketing sirf ads chalane ka naam nahi hai.</strong> Yeh ek complete ecosystem hai —
-        sahi audience tak pahunchna, unhe engage karna, aur unhe paying customer banana. Iske liye chahiye:
-        SEO jo aapko Google par dikhaye, Meta Ads jo sahi log dekhen, aur lead generation jo aapki sales funnel ko bhart rakhe.
-      </p>
-      <p>
-        Neeche diye gaye quiz se aap kuch hi minutes mein samajh sakte hain ki aapka business is ecosystem mein
-        kahan hai — aur aage kya karna chahiye. <strong>Honest jawab dein, taaki score sahi aaye.</strong>
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ═══════════════════════════════════════════════
-     SECTION 3 — INTERACTIVE QUIZ
-═══════════════════════════════════════════════ -->
-<section id="quiz-section" style="position:relative; z-index:1; padding:0 0 20px;">
-  <div class="wrap">
-
-    <div class="section-label">Interactive Quiz</div>
-    <h2 class="section-title">Business Growth Quiz</h2>
-    <p class="section-body">5 sawal · 2 minutes · Turant result</p>
-
-    <!-- Progress -->
-    <div class="quiz-meta">
-      <span id="q-counter">Sawal 1 / 5</span>
-      <span id="q-pts">0 points</span>
-    </div>
-    <div class="progress-wrap">
-      <div class="progress-bar" id="progressBar" style="width:0%"></div>
-    </div>
-
-    <!-- Question display -->
-    <div id="quiz-container"></div>
-
-    <!-- Result (hidden initially) -->
-    <div id="result-section"></div>
-
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ═══════════════════════════════════════════════
-     SECTION 4 — SERVICES
-═══════════════════════════════════════════════ -->
-<section id="services-section" style="position:relative; z-index:1;">
-  <div class="wrap">
-
-    <div class="section-label">Hamaari Services</div>
-    <h2 class="section-title">Aapke Business Ko<br>Aage Badhane Ke Liye</h2>
-    <p class="section-body">
-      Har business alag hota hai. Isliye hum customized strategy banate hain — generic packages nahi.
-    </p>
-
-    <div class="services-grid">
-
-      <div class="srv-card">
-        <div class="srv-icon a"><i class="fas fa-bullseye"></i></div>
-        <div class="srv-title">Meta Ads Specialist</div>
-        <p class="srv-desc">
-          Targeted ads jo sirf unhe dikhenge jo khareedna chahte hain. Aapka budget waste nahi hoga.
-          Real estate se lekar retail tak — hum har industry mein kaam karte hain.
-        </p>
-        <span class="srv-tag a">Results in 48 hrs</span>
-      </div>
-
-      <div class="srv-card">
-        <div class="srv-icon b"><i class="fas fa-home"></i></div>
-        <div class="srv-title">Real Estate Lead Gen</div>
-        <p class="srv-desc">
-          Ready-to-move flats ke liye high-intent leads. Verified buyers jo actually property lena chahte hain —
-          sirf curious visitors nahi.
-        </p>
-        <span class="srv-tag b">150+ leads / month</span>
-      </div>
-
-      <div class="srv-card">
-        <div class="srv-icon c"><i class="fas fa-search"></i></div>
-        <div class="srv-title">SEO Mastery</div>
-        <p class="srv-desc">
-          Google ke pehle page par apni pehchan banayein. Local SEO se Faridabad mein top rank pao
-          aur organic traffic se leads lo — bina ads ke.
-        </p>
-        <span class="srv-tag c">Rank #1 Locally</span>
-      </div>
-
-      <div class="srv-card">
-        <div class="srv-icon d"><i class="fas fa-chart-line"></i></div>
-        <div class="srv-title">ROI Tracking & Reports</div>
-        <p class="srv-desc">
-          Har rupaye ka hisaab. Weekly dashboard reports jisme clearly dikhega — kitne leads aaye,
-          kitna spend hua, aur kitna return mila.
-        </p>
-        <span class="srv-tag d">Full Transparency</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════
-     SECTION 5 — FINAL CTA BANNER
-═══════════════════════════════════════════════ -->
-<div class="cta-banner">
-  <h2>Free Audit Lo — Aaj Hi</h2>
-  <p>Hamaari team aapke business ko analyze karegi aur ek personalized digital strategy degi. Bilkul free.</p>
-  <span class="phone-big"><i class="fas fa-phone-alt" style="font-size:20px;margin-right:10px;color:#a78bfa;"></i><span>+91 83838</span> 55004</span>
-  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-    <a href="https://wa.me/918383855004?text=Hi!%20Maine%20quiz%20diya%20aur%20free%20audit%20chahiye." class="btn-grad" target="_blank" rel="noopener">
-      <i class="fab fa-whatsapp"></i> WhatsApp Par Message Karein
-    </a>
-    <a href="contact.html" class="btn-ghost">
-      <i class="fas fa-file-alt"></i> Form Fill Karein
-    </a>
-  </div>
+<!-- ── STATS BAR ── -->
+<div class="stats-bar" role="region" aria-label="Agency statistics">
+  <div class="stat-item"><span class="stat-num">50+</span><span class="stat-label">Happy Clients</span></div>
+  <div class="stat-item"><span class="stat-num">150+</span><span class="stat-label">Leads / Month</span></div>
+  <div class="stat-item"><span class="stat-num">4.9★</span><span class="stat-label">Google Rating</span></div>
+  <div class="stat-item"><span class="stat-num">48h</span><span class="stat-label">Pehli Lead</span></div>
 </div>
 
-<!-- FOOTER -->
+<!-- ── ARTICLES ── -->
+<section id="articles" class="section">
+  <span class="sec-tag">Latest Articles</span>
+  <h2 class="sec-title">Digital Marketing Insights</h2>
+  <p class="sec-sub">Faridabad ke local businesses ke liye practical guides — Google, Meta Ads, SEO aur zyada.</p>
+
+  <!-- Featured Post -->
+  <a href="blog2.html" class="featured-wrap" aria-label="Featured article: Google My Business Guide">
+    <div class="feat-visual">
+      <span class="feat-badge-pill">FEATURED</span>🗺️
+    </div>
+    <div class="feat-content">
+      <span class="blog-chip chip-gmb">Google My Business</span>
+      <h2>Google My Business Se Faridabad Mein Top 3 Rank Kaise Karein 2026 — Ultimate Guide</h2>
+      <p>50+ local businesses ko Faridabad ke Local Pack Top 3 mein laya — step-by-step strategy ke saath. Real Estate, Finance, Clinics sab ke liye kaam karta hai.</p>
+      <span class="read-more-link">Article Padhein <i class="fas fa-arrow-right"></i></span>
+    </div>
+  </a>
+
+  <!-- Blog Grid -->
+  <div class="blog-grid">
+    <a href="blog.html" class="blog-card" aria-label="Blog: Facebook Strategy">
+      <div class="card-thumb thumb-purple">📣</div>
+      <div class="card-body">
+        <span class="blog-chip chip-seo">Strategy</span>
+        <h3>Facebook Page Hona Kaafi Nahi — Aapko Strategy Chahiye</h3>
+        <p>Sirf page banana kaafi nahi — proper digital strategy ke bina aapke competitors aapke customers le ja rahe hain.</p>
+        <div class="card-footer-row">
+          <span class="card-date"><i class="fas fa-calendar" style="opacity:.5;margin-right:3px;"></i>Apr 01, 2026</span>
+          <span class="card-read">Read <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+    </a>
+
+    <a href="blog3.html" class="blog-card" aria-label="Blog: Digital Marketing Guide">
+      <div class="card-thumb thumb-teal">📈</div>
+      <div class="card-body">
+        <span class="blog-chip chip-seo">SEO Guide</span>
+        <h3>Faridabad Mein Digital Marketing Se Business Kaise Badhayein? 2026 Complete Guide</h3>
+        <p>Google Page 1 par aane ke practical tips — bina bade budget ke.</p>
+        <div class="card-footer-row">
+          <span class="card-date"><i class="fas fa-calendar" style="opacity:.5;margin-right:3px;"></i>Apr 15, 2026</span>
+          <span class="card-read">Read <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+    </a>
+
+    <a href="blog4.html" class="blog-card" aria-label="Blog: Real Estate Meta Ads">
+      <div class="card-thumb thumb-green">🏠</div>
+      <div class="card-body">
+        <span class="blog-chip chip-ads">Meta Ads</span>
+        <h3>Real Estate Ke Liye Meta Ads — Verified Leads Paane Ka Complete Formula 2026</h3>
+        <p>Sirf serious buyers tak kaise pahunchen — lead forms, targeting aur budget strategy.</p>
+        <div class="card-footer-row">
+          <span class="card-date"><i class="fas fa-calendar" style="opacity:.5;margin-right:3px;"></i>Apr 20, 2026</span>
+          <span class="card-read">Read <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="section section-alt">
+  <span class="sec-tag">Our Services</span>
+  <h2 class="sec-title">Hum Kya Karte Hain?</h2>
+  <p class="sec-sub">Faridabad aur Delhi NCR ke businesses ke liye complete digital marketing solutions.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon si-purple"><i class="fas fa-search"></i></div>
+      <h3>Local SEO</h3>
+      <p>Google Maps aur Local Pack mein top rank — Faridabad ke customers aapko pehle dhundhein.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon si-teal"><i class="fab fa-facebook"></i></div>
+      <h3>Meta Ads</h3>
+      <p>Facebook &amp; Instagram par targeted ads — sirf serious buyers tak, 48h mein leads.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon si-green"><i class="fas fa-chart-line"></i></div>
+      <h3>Lead Generation</h3>
+      <p>Real Estate, Finance &amp; local businesses ke liye verified leads jo convert karein.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon si-pink"><i class="fas fa-map-marker-alt"></i></div>
+      <h3>Google My Business</h3>
+      <p>GMB profile optimize karein — reviews, posts, photos aur Local SEO ek saath.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── QUIZ ── -->
+<section id="quiz" class="quiz-section">
+  <span class="sec-tag">Interactive Quiz</span>
+  <h2 class="sec-title" style="margin-bottom:32px;">Business Growth Score Check Karo</h2>
+
+  <div class="quiz-card">
+    <div class="quiz-title">Aapka Digital Marketing Score Kitna Hai?</div>
+    <p class="quiz-sub">5 sawal · 2 minutes · Turant result + free recommendation</p>
+    <div class="quiz-meta">
+      <span id="qCounter">Sawal 1 / 5</span>
+      <span id="qPts">0 / 100 points</span>
+    </div>
+    <div class="prog-track"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+    <div id="quizBody"></div>
+    <div id="resultBox"></div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="section">
+  <span class="sec-tag">Client Reviews</span>
+  <h2 class="sec-title">4.9★ Rated by Our Happy Clients</h2>
+  <p class="sec-sub">Faridabad aur Delhi NCR ke businesses ne hamare saath grow kiya.</p>
+  <div class="testimonials-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Preeti Agency doubled our real estate leads in Faridabad within 3 months. Highly recommended for SEO and Meta Ads!"</p>
+      <div class="testi-author">
+        <div class="author-avatar">DC</div>
+        <div><div class="author-name">Deepak Chaudhary</div><div class="author-role">Owner, Adarash Finance &amp; Real Estate</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Best digital marketing services. Their transparency and ROI-focused Meta Ads are outstanding."</p>
+      <div class="testi-author">
+        <div class="author-avatar">KS</div>
+        <div><div class="author-name">Kanchan Sardana</div><div class="author-role">Founder, Rozette Residency</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Expert team for local SEO. They optimized our visibility for Faridabad keywords. Great results and professional approach."</p>
+      <div class="testi-author">
+        <div class="author-avatar">AS</div>
+        <div><div class="author-name">Amit Singh</div><div class="author-role">CEO, BPTP Projects Builder</div></div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:28px;">
+    <a href="https://share.google/wjvXsc9gwexzBMSoy" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-google"></i> Read More Google Reviews
+    </a>
+  </div>
+</section>
+
+<!-- ── CTA BANNER ── -->
+<section class="cta-section">
+  <span class="sec-tag" style="color:rgba(255,255,255,.7);">Free Consultation</span>
+  <h2>Free Digital Marketing Audit Chahiye?</h2>
+  <p>Expert team aapke business ka analysis karegi aur personalized strategy degi — bilkul free, koi commitment nahi.</p>
+  <span class="cta-phone"><i class="fas fa-phone-alt" style="margin-right:10px;font-size:20px;"></i>+91 83838 55004</span>
+  <div class="cta-btns">
+    <a href="https://wa.me/918383855004?text=Blog%20padha%2C%20free%20audit%20chahiye!" class="btn-white" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-whatsapp" style="color:#25d366;font-size:16px;"></i> WhatsApp Par Message Karein
+    </a>
+    <a href="contact.html" class="btn-outline-w"><i class="fas fa-file-alt"></i> Form Fill Karein</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
 <footer>
-  <p>© 2026 Preeti Growth Agency · Sector 30, Faridabad, Haryana</p>
-  <p><a href="index.html">Home</a> · <a href="contact.html">Contact</a> · <a href="https://wa.me/918383855004">WhatsApp</a></p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand-name">PREETI <span>GROWTH</span></div>
+      <p>Faridabad ki #1 Digital Marketing Agency — SEO, Meta Ads aur Lead Generation mein expert. 50+ happy clients, 4.9★ rated.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/1DQxj7EZkw/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/digital_business_badhao" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/preeti-digital-business-badhao-380864380" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/918383855004" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Blog Articles</h4>
+      <ul>
+        <li><a href="blog2.html">GMB Top 3 Rank Guide</a></li>
+        <li><a href="blog3.html">Digital Marketing Guide</a></li>
+        <li><a href="blog4.html">Real Estate Meta Ads</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+918383855004">+91 83838 55004</a></li>
+        <li><a href="https://wa.me/918383855004">WhatsApp Chat</a></li>
+        <li><a href="contact.html">Free Audit Request</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Preeti Growth Agency · Sector 30, Faridabad, Haryana</p>
+    <p>
+      <a href="privacy-policy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms of Service</a>
+    </p>
+  </div>
 </footer>
 
-<!-- WhatsApp float -->
-<a href="https://wa.me/918383855004" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
+<a href="https://wa.me/918383855004" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<div class="mob-bar" role="complementary" aria-label="Quick contact">
+  <a href="tel:+918383855004" class="mob-call">📞 Call Now</a>
+  <a href="https://wa.me/918383855004" class="mob-wa" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+</div>
 
-<!-- ═══════════════════════════════════════════════
-     QUIZ JAVASCRIPT
-═══════════════════════════════════════════════ -->
 <script>
-const questions = [
-  {
-    text: "Aapki leads kahan se aati hain?",
-    opts: [
-      { label:"Sirf jaan-pehchan se ya walk-in", pts:0 },
-      { label:"Kabhi-kabhi ads se, par irregular", pts:5 },
-      { label:"Regular Meta Ads & SEO se — consistent hai", pts:10 }
-    ]
-  },
-  {
-    text: "Aapki website mobile par kaisi dikhti hai?",
-    opts: [
-      { label:"Pata nahi / Slow hai / Website nahi hai", pts:0 },
-      { label:"Theek-thaak hai, par professional nahi", pts:5 },
-      { label:"Fast, mobile-friendly aur professional", pts:10 }
-    ]
-  },
-  {
-    text: "Kya aap apne ad campaign ka ROI track karte hain?",
-    opts: [
-      { label:"Nahi — idea hi nahi hai", pts:0 },
-      { label:"Haan, par mushkil se aur properly nahi", pts:5 },
-      { label:"Haan — dashboard ke zariye, weekly report milti hai", pts:10 }
-    ]
-  },
-  {
-    text: "Google par aapka business kahan dikhta hai?",
-    opts: [
-      { label:"Dikhta hi nahi", pts:0 },
-      { label:"Page 2 ya 3 par — bahut peeche", pts:5 },
-      { label:"Page 1 par — local searches mein top 3 mein", pts:10 }
-    ]
-  },
-  {
-    text: "Social media par aap kitne active hain?",
-    opts: [
-      { label:"Kabhi-kabhi post karte hain — irregular", pts:0 },
-      { label:"Weekly 2-3 posts, par engagement kam hai", pts:5 },
-      { label:"Daily content + Reels + engagement — consistent strategy", pts:10 }
-    ]
-  }
+// Hamburger
+const ham=document.getElementById('hamburger');
+const nav=document.getElementById('navLinks');
+ham.addEventListener('click',()=>{
+  const open=nav.classList.toggle('open');
+  ham.setAttribute('aria-expanded',open);
+});
+
+// Quiz
+const qs=[
+  {q:"Aapki leads kahan se aati hain?",opts:[
+    {t:"Sirf word-of-mouth / referral",p:0},{t:"Social media organic posts",p:10},
+    {t:"Paid ads (Meta/Google)",p:20},{t:"SEO + Ads dono se",p:25}]},
+  {q:"Kya aapka business Google Maps par dikh raha hai?",opts:[
+    {t:"Nahi, GMB setup nahi",p:0},{t:"Hai lekin optimize nahi",p:10},
+    {t:"Hai, basic info fill hai",p:15},{t:"Fully optimized + reviews hain",p:25}]},
+  {q:"Monthly kitna ad budget invest karte hain?",opts:[
+    {t:"Kuch nahi",p:0},{t:"₹5,000 se kam",p:10},
+    {t:"₹5,000 – ₹15,000",p:15},{t:"₹15,000+ with ROI tracking",p:25}]},
+  {q:"Kya professional website hai?",opts:[
+    {t:"Nahi",p:0},{t:"Basic hai, mobile-friendly nahi",p:8},
+    {t:"Hai, mobile-friendly",p:15},{t:"SEO-optimized + fast loading",p:25}]},
+  {q:"Aap leads kaise track karte hain?",opts:[
+    {t:"Track nahi karta",p:0},{t:"WhatsApp/Call se manually",p:8},
+    {t:"Spreadsheet mein",p:15},{t:"CRM / proper tracking",p:25}]}
 ];
+let cur=0,total=0,sel=null;
 
-let current = 0;
-let answers = new Array(questions.length).fill(null);
-let totalScore = 0;
-
-const container   = document.getElementById('quiz-container');
-const resultSec   = document.getElementById('result-section');
-const progressBar = document.getElementById('progressBar');
-const qCounter    = document.getElementById('q-counter');
-const qPts        = document.getElementById('q-pts');
-
-function renderQuestion() {
-  const q   = questions[current];
-  const pct = (current / questions.length) * 100;
-
-  progressBar.style.width = pct + '%';
-  qCounter.textContent    = 'Sawal ' + (current + 1) + ' / ' + questions.length;
-  qPts.textContent        = totalScore + ' points';
-
-  const letters = ['A','B','C'];
-
-  container.innerHTML = `
-    <div class="q-card">
-      <span class="q-num">Question ${current + 1} of ${questions.length}</span>
-      <p class="q-text">${q.text}</p>
-      <div class="options">
-        ${q.opts.map((o, i) => `
-          <div class="opt ${answers[current] === i ? 'selected' : ''}"
-               onclick="selectOpt(${i})" data-i="${i}">
-            <div class="opt-letter">${letters[i]}</div>
-            <div class="opt-text">${o.label}</div>
-            <div class="opt-pts">${o.pts === 0 ? '0 pts' : '+' + o.pts + ' pts'}</div>
-          </div>
-        `).join('')}
-      </div>
-      <div class="q-nav">
-        <button class="q-back" onclick="goBack()" ${current === 0 ? 'disabled' : ''}>
-          <i class="fas fa-arrow-left"></i> Pichla
-        </button>
-        <button class="q-next" id="nextBtn" onclick="goNext()"
-          ${answers[current] === null ? 'disabled' : ''}>
-          ${current < questions.length - 1 ? 'Agla Sawal <i class="fas fa-arrow-right"></i>' : 'Result Dekho <i class="fas fa-chart-bar"></i>'}
-        </button>
-      </div>
-    </div>`;
+function renderQ(){
+  const q=qs[cur];
+  document.getElementById('qCounter').textContent=`Sawal ${cur+1} / ${qs.length}`;
+  document.getElementById('qPts').textContent=`${total} / 100 points`;
+  document.getElementById('progFill').style.width=`${(cur/qs.length)*100}%`;
+  sel=null;
+  let h=`<div class="q-block"><span class="q-num">Question ${cur+1}</span><div class="q-text">${q.q}</div><div class="options-list">`;
+  q.opts.forEach((o,i)=>{
+    h+=`<div class="option" onclick="pick(this,${o.p})" role="button" tabindex="0" aria-label="${o.t}">
+      <div class="opt-key">${String.fromCharCode(65+i)}</div>
+      <div class="opt-label">${o.t}</div>
+      <div class="opt-score">+${o.p}</div></div>`;
+  });
+  h+=`</div><div class="q-buttons">
+    <button class="btn-back-q" onclick="goBack()" ${cur===0?'disabled':''} aria-label="Previous question">← Pichla</button>
+    <button class="btn-next-q" id="btnN" onclick="goNext()" disabled aria-label="Next question">
+      ${cur===qs.length-1?'Result Dekho <i class="fas fa-chart-bar"></i>':'Agla <i class="fas fa-arrow-right"></i>'}
+    </button></div></div>`;
+  document.getElementById('quizBody').innerHTML=h;
+  // keyboard support
+  document.querySelectorAll('.option').forEach(o=>{
+    o.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')o.click();});
+  });
 }
 
-function selectOpt(i) {
-  answers[current] = i;
-  renderQuestion();
+function pick(el,p){
+  document.querySelectorAll('.option').forEach(o=>o.classList.remove('picked'));
+  el.classList.add('picked'); sel=p;
+  document.getElementById('btnN').disabled=false;
 }
-
-function goNext() {
-  if (answers[current] === null) return;
-  if (current < questions.length - 1) {
-    current++;
-    renderQuestion();
-  } else {
-    showResult();
-  }
+function goNext(){
+  if(sel===null)return;
+  total+=sel; cur++;
+  if(cur>=qs.length)showResult(); else renderQ();
 }
+function goBack(){if(cur>0){cur--;renderQ();}}
 
-function goBack() {
-  if (current > 0) { current--; renderQuestion(); }
+function showResult(){
+  document.getElementById('progFill').style.width='100%';
+  document.getElementById('qCounter').textContent='Quiz Complete ✓';
+  document.getElementById('quizBody').innerHTML='';
+  const pct=Math.round((total/100)*100),deg=Math.round((pct/100)*360);
+  let bc,badge,title,msg;
+  if(total<35){bc='rb-low';badge='⚠️ Urgent Action Needed';title='Aapka Business Online Peeche Hai';msg='Competitors aapke customers le ja rahe hain. Hum 48 ghante mein leads shuru kar sakte hain.';}
+  else if(total<70){bc='rb-mid';badge='📈 Growth Potential High Hai';title='Sahi Raste Par — Scale Karna Baaki Hai';msg='Aapne kuch sahi steps liye hain. Ek proper strategy se 3x zyada leads pa sakte hain.';}
+  else{bc='rb-high';badge='🏆 Strong Digital Presence';title='Excellent! Aap Digital Mein Aage Hain';msg='Aap smart kaam kar rahe hain. Expert guidance se aur scale kar sakte hain.';}
+  const rb=document.getElementById('resultBox');
+  rb.style.display='block';
+  rb.innerHTML=`<div class="result-center">
+    <div class="score-donut" style="background:conic-gradient(#6c5ce7 ${deg*3.6}deg,#f0f0f5 0deg)">
+      <div class="score-inner"><span class="score-pct">${pct}%</span><span class="score-lbl">Score</span></div>
+    </div>
+    <div class="res-badge ${bc}">${badge}</div>
+    <div class="res-title">${title}</div>
+    <p class="res-msg">${msg}</p>
+    <div class="res-btns">
+      <a href="https://wa.me/918383855004?text=Score%20${pct}%25%20aaya.%20Free%20audit%20chahiye!" class="btn-primary" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i> Free Strategy Call
+      </a>
+      <button class="btn-retry" onclick="retryQ()">↺ Dubara Lo</button>
+    </div></div>`;
 }
-
-function showResult() {
-  totalScore = answers.reduce((sum, a, qi) =>
-    sum + (a !== null ? questions[qi].opts[a].pts : 0), 0);
-
-  progressBar.style.width = '100%';
-  qCounter.textContent    = 'Complete!';
-  qPts.textContent        = totalScore + ' / 50 points';
-  container.innerHTML     = '';
-
-  let tier, badgeClass, title, msg;
-
-  if (totalScore <= 15) {
-    tier = 'low';
-    badgeClass = 'low';
-    title = 'Urgent Attention Needed!';
-    msg = 'Aapka business digital duniya mein kaafi peeche hai. Lekin yeh fix ho sakta hai — aur jaldi. Hamare saath ek free 30-minute audit book karein aur ek clear roadmap pao.';
-  } else if (totalScore <= 30) {
-    tier = 'mid';
-    badgeClass = 'mid';
-    title = 'Good — But Not Great Yet.';
-    msg = 'Aapne shuruaat kar di hai, par abhi bahut potential hai jo use nahi ho raha. Meta Ads optimize karke aur SEO strengthen karke aap 3x results pa sakte hain.';
-  } else {
-    tier = 'high';
-    badgeClass = 'high';
-    title = 'Digital Rockstar! 🚀';
-    msg = 'Waah! Aap sahi raste par hain. Ab sirf scale karne ki der hai. Ek strategy call mein hum aapko next level par le ja sakte hain — aur bhi zyada leads, aur bhi zyada ROI.';
-  }
-
-  const deg = Math.round((totalScore / 50) * 360);
-
-  const scoreTable = `
-    <table class="score-table">
-      <thead>
-        <tr>
-          <th>Score</th>
-          <th>Status</th>
-          <th>Recommendation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="${totalScore <= 15 ? 'active' : ''}">
-          <td>0 – 15 pts</td>
-          <td><span class="badge-pill low">Urgent</span></td>
-          <td>Aapka business peeche chhoot raha hai.</td>
-        </tr>
-        <tr class="${totalScore > 15 && totalScore <= 30 ? 'active' : ''}">
-          <td>16 – 30 pts</td>
-          <td><span class="badge-pill mid">Growing</span></td>
-          <td>Meta Ads optimize karna zaroori hai.</td>
-        </tr>
-        <tr class="${totalScore > 30 ? 'active' : ''}">
-          <td>31 – 50 pts</td>
-          <td><span class="badge-pill high">Rockstar</span></td>
-          <td>Bas scale karne ki der hai!</td>
-        </tr>
-      </tbody>
-    </table>`;
-
-  resultSec.style.display = 'block';
-  resultSec.innerHTML = `
-    <div class="result-card">
-      <div class="score-ring" id="scoreRing">
-        <div class="score-ring-inner">
-          <span class="score-num">${totalScore}</span>
-          <span class="score-max">/ 50</span>
-        </div>
-      </div>
-      <div class="result-badge ${badgeClass}">${tier === 'low' ? '⚠ Urgent' : tier === 'mid' ? '📈 Growing' : '🚀 Rockstar'}</div>
-      <h3 class="result-title">${title}</h3>
-      <p class="result-msg">${msg}</p>
-      ${scoreTable}
-      <div class="result-cta-row">
-        <a href="https://wa.me/918383855004?text=Hi!%20Maine%20quiz%20mein%20${totalScore}%2F50%20score%20kiya.%20Free%20audit%20chahiye." class="btn-grad" target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i> Free Audit Book Karein
-        </a>
-        <button class="retry-btn" onclick="resetQuiz()">
-          <i class="fas fa-redo"></i> Dobara Try Karein
-        </button>
-      </div>
-      <p style="font-size:12px;color:var(--muted);margin-top:8px;">
-        <i class="fas fa-phone-alt" style="margin-right:4px;"></i>
-        Ya seedha call karein: <a href="tel:+918383855004" style="color:var(--accent2);">+91 83838 55004</a>
-      </p>
-    </div>`;
-
-  /* Animate the conic gradient ring */
-  setTimeout(function () {
-    const ring = document.getElementById('scoreRing');
-    if (ring) {
-      const color = tier === 'low' ? '#f87171' : tier === 'mid' ? '#fbbf24' : '#34d399';
-      ring.style.background =
-        `conic-gradient(${color} ${deg}deg, #1a1b26 ${deg}deg)`;
-    }
-  }, 100);
-
-  resultSec.scrollIntoView({ behavior:'smooth', block:'start' });
-}
-
-function resetQuiz() {
-  current    = 0;
-  answers    = new Array(questions.length).fill(null);
-  totalScore = 0;
-  resultSec.style.display = 'none';
-  resultSec.innerHTML     = '';
-  renderQuestion();
-  document.getElementById('quiz-section').scrollIntoView({ behavior:'smooth' });
-}
-
-/* Init */
-renderQuestion();
+function retryQ(){cur=0;total=0;sel=null;document.getElementById('resultBox').style.display='none';renderQ();}
+renderQ();
 </script>
 </body>
 </html>
