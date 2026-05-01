@@ -1,1246 +1,630 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="hi-IN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get Free Audit | Preeti Growth Agency — Faridabad</title>
-  <meta name="description"
-    content="Contact Preeti Growth Agency for free digital marketing audit. SEO, Meta Ads & Lead Generation experts in Faridabad, Delhi NCR.">
-  <link rel="canonical" href="https://digital-business-badhao.github.io/preeti-growth-agency/contact.html">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-  <style>
-    /* ── Variables ── */
-    :root {
-      --ink: #0e0e12;
-      --ink2: #3a3a4a;
-      --mist: #f4f3f0;
-      --white: #ffffff;
-      --accent: #6c5ce7;
-      --accent2: #00cec9;
-      --gold: #f9a825;
-      --danger: #e84393;
-      --grad: linear-gradient(135deg, #6c5ce7 0%, #00cec9 100%);
-      --grad2: linear-gradient(135deg, #0e0e12 0%, #1e1b3a 100%);
-      --radius: 16px;
-      --shadow: 0 20px 60px rgba(108, 92, 231, .15);
-    }
-
-    /* ── Reset ── */
-    *,
-    *::before,
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--mist);
-      color: var(--ink);
-      overflow-x: hidden;
-      min-height: 100vh;
-    }
-
-    /* ── Animated background dots ── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        radial-gradient(circle, rgba(108, 92, 231, .06) 1px, transparent 1px),
-        radial-gradient(circle, rgba(0, 206, 201, .04) 1px, transparent 1px);
-      background-size: 48px 48px, 72px 72px;
-      background-position: 0 0, 24px 24px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 6%;
-      background: rgba(244, 243, 240, .92);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(108, 92, 231, .1);
-    }
-
-    .nav-brand {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 18px;
-      color: var(--ink);
-      text-decoration: none;
-      letter-spacing: -.3px;
-    }
-
-    .nav-brand span {
-      color: var(--accent);
-    }
-
-    .nav-back {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--ink2);
-      text-decoration: none;
-      transition: color .2s;
-    }
-
-    .nav-back:hover {
-      color: var(--accent);
-    }
-
-    .nav-cta {
-      padding: 9px 20px;
-      background: var(--grad);
-      color: white;
-      border-radius: 30px;
-      font-size: 13px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: opacity .2s, transform .2s;
-    }
-
-    .nav-cta:hover {
-      opacity: .9;
-      transform: translateY(-1px);
-    }
-
-    /* ── PAGE LAYOUT ── */
-    .page {
-      position: relative;
-      z-index: 1;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 60px 5% 100px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: start;
-    }
-
-    /* ── LEFT PANEL ── */
-    .left {
-      position: sticky;
-      top: 100px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: white;
-      border: 1px solid rgba(108, 92, 231, .2);
-      border-radius: 30px;
-      padding: 6px 14px;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--accent);
-      margin-bottom: 24px;
-      letter-spacing: .4px;
-    }
-
-    .eyebrow-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent2);
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: .5;
-        transform: scale(1.4);
-      }
-    }
-
-    .left h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(32px, 4vw, 52px);
-      font-weight: 800;
-      line-height: 1.1;
-      color: var(--ink);
-      margin-bottom: 20px;
-      letter-spacing: -1px;
-    }
-
-    .left h1 .grad-text {
-      background: var(--grad);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .left p {
-      font-size: 16px;
-      color: var(--ink2);
-      line-height: 1.75;
-      max-width: 420px;
-      margin-bottom: 36px;
-      font-weight: 300;
-    }
-
-    /* Trust badges */
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 36px;
-    }
-
-    .badge {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      background: white;
-      border: 1px solid rgba(0, 0, 0, .07);
-      border-radius: 10px;
-      padding: 8px 14px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--ink);
-    }
-
-    .badge i {
-      color: var(--accent);
-      font-size: 13px;
-    }
-
-    /* Stats strip */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-bottom: 36px;
-    }
-
-    .stat {
-      background: white;
-      border-radius: var(--radius);
-      padding: 18px 14px;
-      text-align: center;
-      border: 1px solid rgba(0, 0, 0, .06);
-      transition: transform .25s;
-    }
-
-    .stat:hover {
-      transform: translateY(-3px);
-    }
-
-    .stat-num {
-      font-family: 'Syne', sans-serif;
-      font-size: 26px;
-      font-weight: 800;
-      background: var(--grad);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      display: block;
-    }
-
-    .stat-label {
-      font-size: 11px;
-      color: var(--ink2);
-      margin-top: 3px;
-      display: block;
-      font-weight: 400;
-    }
-
-    /* Contact info cards */
-    .info-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .info-card {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: white;
-      border-radius: 12px;
-      padding: 14px 16px;
-      border: 1px solid rgba(0, 0, 0, .06);
-      text-decoration: none;
-      color: inherit;
-      transition: border-color .2s, box-shadow .2s, transform .2s;
-    }
-
-    .info-card:hover {
-      border-color: rgba(108, 92, 231, .3);
-      box-shadow: 0 4px 20px rgba(108, 92, 231, .1);
-      transform: translateX(4px);
-    }
-
-    .info-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      flex-shrink: 0;
-    }
-
-    .info-icon.wa {
-      background: #e7f9ef;
-      color: #25d366;
-    }
-
-    .info-icon.ph {
-      background: #e6f1fb;
-      color: #2196f3;
-    }
-
-    .info-icon.em {
-      background: #f3e7ff;
-      color: var(--accent);
-    }
-
-    .info-icon.loc {
-      background: #fff3e0;
-      color: #f57c00;
-    }
-
-    .info-text {
-      flex: 1;
-    }
-
-    .info-text strong {
-      display: block;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--ink);
-      margin-bottom: 2px;
-    }
-
-    .info-text span {
-      font-size: 12px;
-      color: var(--ink2);
-      font-weight: 300;
-    }
-
-    /* ── RIGHT PANEL — FORM ── */
-    .form-card {
-      background: white;
-      border-radius: 24px;
-      padding: 40px 36px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(108, 92, 231, .08);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .form-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--grad);
-    }
-
-    .form-header {
-      margin-bottom: 28px;
-    }
-
-    .form-header h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--ink);
-      margin-bottom: 6px;
-    }
-
-    .form-header p {
-      font-size: 14px;
-      color: var(--ink2);
-      font-weight: 300;
-    }
-
-    /* Free badge */
-    .free-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, #f9a825, #ff6f00);
-      color: white;
-      font-size: 10px;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 20px;
-      margin-left: 8px;
-      vertical-align: middle;
-      letter-spacing: .5px;
-    }
-
-    /* Form fields */
-    .field-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 16px;
-    }
-
-    .field label {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--ink2);
-      letter-spacing: .3px;
-    }
-
-    .field label .req {
-      color: var(--danger);
-      margin-left: 2px;
-    }
-
-    .field input,
-    .field select,
-    .field textarea {
-      width: 100%;
-      padding: 13px 16px;
-      border: 1.5px solid #e8e8ef;
-      border-radius: 12px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
-      color: var(--ink);
-      background: #fafafa;
-      outline: none;
-      transition: border-color .2s, background .2s, box-shadow .2s;
-      appearance: none;
-      -webkit-appearance: none;
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      border-color: var(--accent);
-      background: white;
-      box-shadow: 0 0 0 4px rgba(108, 92, 231, .08);
-    }
-
-    .field input.error,
-    .field select.error,
-    .field textarea.error {
-      border-color: var(--danger);
-      box-shadow: 0 0 0 4px rgba(232, 67, 147, .08);
-    }
-
-    .field .err-msg {
-      font-size: 11px;
-      color: var(--danger);
-      display: none;
-      margin-top: -4px;
-    }
-
-    .field .err-msg.show {
-      display: block;
-    }
-
-    .field textarea {
-      height: 110px;
-      resize: none;
-    }
-
-    /* Select arrow */
-    .select-wrap {
-      position: relative;
-    }
-
-    .select-wrap::after {
-      content: '\f107';
-      font-family: 'Font Awesome 6 Free';
-      font-weight: 900;
-      position: absolute;
-      right: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--ink2);
-      pointer-events: none;
-      font-size: 12px;
-    }
-
-    /* Budget slider */
-    .budget-display {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 8px;
-    }
-
-    .budget-val {
-      font-family: 'Syne', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .budget-note {
-      font-size: 11px;
-      color: var(--ink2);
-    }
-
-    input[type="range"] {
-      width: 100%;
-      height: 4px;
-      border-radius: 2px;
-      background: linear-gradient(to right, var(--accent) 0%, var(--accent) var(--pct, 20%), #e0e0e0 var(--pct, 20%));
-      outline: none;
-      cursor: pointer;
-      padding: 0;
-      border: none;
-      appearance: none;
-      -webkit-appearance: none;
-    }
-
-    input[type="range"]::-webkit-slider-thumb {
-      appearance: none;
-      -webkit-appearance: none;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background: var(--accent);
-      border: 3px solid white;
-      box-shadow: 0 2px 8px rgba(108, 92, 231, .4);
-      cursor: pointer;
-    }
-
-    input[type="range"]::-moz-range-thumb {
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background: var(--accent);
-      border: 3px solid white;
-      cursor: pointer;
-    }
-
-    /* Checkboxes */
-    .services-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
-
-    .service-check {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      background: #fafafa;
-      border: 1.5px solid #e8e8ef;
-      border-radius: 10px;
-      padding: 10px 12px;
-      cursor: pointer;
-      font-size: 13px;
-      color: var(--ink);
-      transition: border-color .2s, background .2s;
-      user-select: none;
-    }
-
-    .service-check input[type="checkbox"] {
-      width: 16px;
-      height: 16px;
-      accent-color: var(--accent);
-      flex-shrink: 0;
-      cursor: pointer;
-      padding: 0;
-      border-radius: 4px;
-    }
-
-    .service-check:has(input:checked) {
-      border-color: var(--accent);
-      background: rgba(108, 92, 231, .05);
-    }
-
-    /* Submit button */
-    .submit-btn {
-      width: 100%;
-      padding: 16px;
-      background: var(--grad);
-      color: white;
-      border: none;
-      border-radius: 14px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: opacity .2s, transform .2s, box-shadow .2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 8px;
-      letter-spacing: .2px;
-    }
-
-    .submit-btn:hover {
-      opacity: .92;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(108, 92, 231, .35);
-    }
-
-    .submit-btn:active {
-      transform: translateY(0);
-    }
-
-    .submit-btn.loading {
-      opacity: .7;
-      pointer-events: none;
-    }
-
-    /* Divider */
-    .or-divider {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 16px 0;
-      font-size: 12px;
-      color: var(--ink2);
-    }
-
-    .or-divider::before,
-    .or-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: #e8e8ef;
-    }
-
-    /* WhatsApp direct button */
-    .wa-btn {
-      width: 100%;
-      padding: 14px;
-      background: white;
-      color: #1a7a44;
-      border: 1.5px solid #c8efd7;
-      border-radius: 14px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      text-decoration: none;
-      transition: background .2s, border-color .2s, transform .2s;
-    }
-
-    .wa-btn:hover {
-      background: #e7f9ef;
-      border-color: #25d366;
-      transform: translateY(-1px);
-    }
-
-    .wa-btn i {
-      color: #25d366;
-      font-size: 18px;
-    }
-
-    /* Privacy note */
-    .privacy-note {
-      text-align: center;
-      font-size: 11px;
-      color: var(--ink2);
-      margin-top: 14px;
-      line-height: 1.6;
-      font-weight: 300;
-    }
-
-    .privacy-note i {
-      font-size: 10px;
-      margin-right: 3px;
-      color: var(--accent2);
-    }
-
-    /* ── SUCCESS STATE ── */
-    .success-overlay {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-      min-height: 400px;
-    }
-
-    .success-overlay.show {
-      display: flex;
-    }
-
-    .success-icon {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #00cec9, #55efc4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
-      color: white;
-      margin-bottom: 24px;
-      animation: pop .4s cubic-bezier(.34, 1.56, .64, 1);
-    }
-
-    @keyframes pop {
-      from {
-        transform: scale(0);
-        opacity: 0;
-      }
-
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
-    .success-overlay h3 {
-      font-family: 'Syne', sans-serif;
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .success-overlay p {
-      font-size: 15px;
-      color: var(--ink2);
-      max-width: 320px;
-      line-height: 1.6;
-    }
-
-    /* ── SOCIAL STRIP ── */
-    .social-strip {
-      display: flex;
-      gap: 10px;
-      margin-top: 24px;
-    }
-
-    .soc {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 15px;
-      text-decoration: none;
-      transition: transform .2s, opacity .2s;
-      border: 1px solid rgba(0, 0, 0, .07);
-    }
-
-    .soc:hover {
-      transform: translateY(-2px);
-      opacity: .85;
-    }
-
-    .soc.ig {
-      background: #fce4ec;
-      color: #E4405F;
-    }
-
-    .soc.fb {
-      background: #e3f2fd;
-      color: #1877F2;
-    }
-
-    .soc.li {
-      background: #e1f0fa;
-      color: #0077b5;
-    }
-
-    .soc.wa {
-      background: #e7f9ef;
-      color: #25D366;
-    }
-
-    .soc.gm {
-      background: #fff3e0;
-      color: #EA4335;
-    }
-
-    /* ── MAP SECTION ── */
-    .map-section {
-      max-width: 1200px;
-      margin: 0 auto 80px;
-      padding: 0 5%;
-      position: relative;
-      z-index: 1;
-    }
-
-    .map-section h3 {
-      font-family: 'Syne', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      color: var(--ink);
-    }
-
-    .map-wrap {
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid rgba(0, 0, 0, .08);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
-    }
-
-    /* ── FOOTER STRIP ── */
-    .footer-strip {
-      background: var(--ink);
-      color: rgba(255, 255, 255, .6);
-      text-align: center;
-      padding: 20px;
-      font-size: 13px;
-    }
-
-    .footer-strip a {
-      color: var(--accent2);
-      text-decoration: none;
-    }
-
-    /* ── WhatsApp float ── */
-    .wa-float {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      width: 56px;
-      height: 56px;
-      background: #25d366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 26px;
-      text-decoration: none;
-      box-shadow: 0 6px 20px rgba(37, 211, 102, .45);
-      z-index: 200;
-      transition: transform .25s;
-    }
-
-    .wa-float:hover {
-      transform: scale(1.1);
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .page {
-        grid-template-columns: 1fr;
-        padding: 40px 5% 80px;
-        gap: 36px;
-      }
-
-      .left {
-        position: static;
-      }
-
-      .left p {
-        max-width: 100%;
-      }
-
-      .field-row {
-        grid-template-columns: 1fr;
-      }
-
-      .stats {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 500px) {
-      .form-card {
-        padding: 28px 20px;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stats {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .trust-row .badge:last-child {
-        display: none;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free Digital Marketing Audit Faridabad | Contact Preeti Growth Agency | +91 83838 55004</title>
+<meta name="description" content="Preeti Growth Agency se free digital marketing audit lein — SEO, Meta Ads & Lead Generation experts in Faridabad, Delhi NCR. 2 ghante mein reply. WhatsApp: +91 83838 55004">
+<meta name="keywords" content="contact digital marketing agency Faridabad, free SEO audit Faridabad, Meta Ads expert Delhi NCR, digital marketing consultation, Preeti Growth Agency contact, lead generation expert Faridabad">
+<meta name="author" content="Preeti — Preeti Growth Agency">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#6c5ce7">
+
+<link rel="canonical" href="https://digital-business-badhao.github.io/preeti-growth-agency/contact.html">
+<link rel="sitemap" type="application/xml" href="https://digital-business-badhao.github.io/preeti-growth-agency/sitemap.xml">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Audit | Contact Preeti Growth Agency Faridabad">
+<meta property="og:description" content="Free digital marketing audit — SEO, Meta Ads & Lead Generation experts in Faridabad. Reply in 2 hours!">
+<meta property="og:image" content="https://digital-business-badhao.github.io/preeti-growth-agency/founder.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://digital-business-badhao.github.io/preeti-growth-agency/contact.html">
+<meta property="og:site_name" content="Preeti Growth Agency">
+<meta property="og:locale" content="hi_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Audit | Contact Preeti Growth Agency Faridabad">
+<meta name="twitter:image" content="https://digital-business-badhao.github.io/preeti-growth-agency/founder.png">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="192x192" href="android-chrome-192x192.png">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://digital-business-badhao.github.io/preeti-growth-agency/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://digital-business-badhao.github.io/preeti-growth-agency/contact.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ContactPage","name":"Contact Preeti Growth Agency — Free Digital Marketing Audit","url":"https://digital-business-badhao.github.io/preeti-growth-agency/contact.html","description":"Get a free digital marketing audit from Preeti Growth Agency, Faridabad. SEO, Meta Ads & Lead Generation experts.","mainEntity":{"@type":"LocalBusiness","name":"Preeti Growth Agency","telephone":"+918383855004","openingHours":"Mo-Sa 09:00-19:00","priceRange":"₹4,999 - ₹49,999","address":{"@type":"PostalAddress","streetAddress":"Sector 30","addressLocality":"Faridabad","addressRegion":"Haryana","postalCode":"121003","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":28.4171529,"longitude":77.3095956}}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Free audit mein kya milega?","acceptedAnswer":{"@type":"Answer","text":"Competitor analysis, current SEO health check, Meta Ads strategy recommendation, Google My Business audit aur lead generation roadmap — sab free. Koi hidden charge nahi."}},{"@type":"Question","name":"Reply kitne time mein milegi?","acceptedAnswer":{"@type":"Answer","text":"WhatsApp par 2 ghante ke andar reply milti hai — Monday se Saturday, 9 AM se 7 PM."}},{"@type":"Question","name":"Kya sirf Faridabad mein kaam karte hain?","acceptedAnswer":{"@type":"Answer","text":"Nahi. Hum Faridabad mein based hain lekin Delhi, Gurgaon, Noida aur poore Delhi NCR mein services provide karte hain."}},{"@type":"Question","name":"Results kitne din mein dikhenge?","acceptedAnswer":{"@type":"Answer","text":"Meta Ads se 24-48 ghante mein leads shuru hoti hain. Local SEO ke results 30-90 din mein clearly dikhte hain."}}]}
+</script>
+
+<!-- SAME FONTS AS INDEX.HTML -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+:root{
+  --purple:#6c5ce7;
+  --purple-dark:#5a4bd1;
+  --teal:#00cec9;
+  --dark:#1a1a1a;
+  --gray:#555;
+  --light:#f8f9ff;
+  --border:#e8e8f0;
+  --shadow:0 4px 20px rgba(108,92,231,.12);
+  --shadow-lg:0 10px 40px rgba(108,92,231,.2);
+  --r:12px;
+  --r-lg:20px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;background:#fff;color:var(--dark);overflow-x:hidden;line-height:1.7;}
+
+/* ── NAVBAR: identical to index ── */
+.navbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:15px 8%;background:#fff;
+  position:sticky;top:0;width:100%;z-index:1000;
+  box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+.nav-logo img{height:40px;}
+.nav-links{display:flex;list-style:none;gap:25px;margin:0;padding:0;}
+.nav-links a{text-decoration:none;color:#333;font-weight:500;font-size:14px;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--purple);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{display:block;width:24px;height:2px;background:#333;border-radius:2px;transition:all .3s;}
+
+/* ── BREADCRUMB ── */
+.breadcrumb{padding:10px 8%;background:var(--light);border-bottom:1px solid var(--border);}
+.breadcrumb ol{display:flex;gap:8px;align-items:center;list-style:none;font-size:12px;color:var(--gray);}
+.breadcrumb a{color:var(--purple);text-decoration:none;}
+
+/* ── HERO ── */
+.hero{
+  background:linear-gradient(135deg,#f3f0ff 0%,#fff 50%,#f0fffe 100%);
+  padding:64px 8% 52px;text-align:center;
+  border-bottom:1px solid var(--border);position:relative;overflow:hidden;
+}
+.hero::before{content:'';position:absolute;top:-80px;left:-80px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(108,92,231,.07),transparent 70%);pointer-events:none;}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(108,92,231,.1);border:1px solid rgba(108,92,231,.2);border-radius:30px;padding:6px 16px;font-size:11px;font-weight:700;letter-spacing:.6px;color:var(--purple);text-transform:uppercase;margin-bottom:20px;}
+.pill-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:blink 1.8s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.25;}}
+.hero h1{font-size:clamp(26px,4vw,48px);font-weight:800;color:var(--dark);line-height:1.15;margin-bottom:16px;letter-spacing:-1px;}
+.hero h1 span{color:var(--purple);}
+.hero p{font-size:15px;color:var(--gray);max-width:520px;margin:0 auto 24px;line-height:1.8;}
+.trust-pills{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+.trust-pill{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--gray);background:rgba(0,206,201,.07);border:1px solid rgba(0,206,201,.2);padding:6px 14px;border-radius:30px;}
+.trust-pill i{color:var(--teal);}
+
+/* ── MAIN LAYOUT ── */
+.main-grid{display:grid;grid-template-columns:1fr 400px;gap:28px;padding:56px 8%;max-width:1200px;margin:0 auto;}
+
+/* ── FORM CARD ── */
+.form-card{
+  background:#fff;border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:40px 36px;
+  box-shadow:var(--shadow);position:relative;overflow:hidden;
+}
+.form-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--purple),var(--teal));}
+.form-title{font-size:22px;font-weight:800;color:var(--dark);margin-bottom:5px;}
+.form-sub{font-size:13px;color:var(--gray);margin-bottom:28px;}
+
+.field{margin-bottom:18px;}
+.field label{display:block;font-size:11px;font-weight:700;color:var(--gray);letter-spacing:.5px;text-transform:uppercase;margin-bottom:7px;}
+.field input,
+.field select,
+.field textarea{
+  width:100%;background:#f8f9ff;
+  border:1.5px solid var(--border);border-radius:var(--r);
+  padding:12px 16px;color:var(--dark);
+  font-size:14px;font-family:'Poppins',sans-serif;
+  outline:none;transition:border-color .2s,background .2s;resize:none;
+}
+.field input::placeholder,.field textarea::placeholder{color:#bbb;}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--purple);background:#fff;}
+.field select{cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23aaa' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-color:#f8f9ff;}
+.field select option{background:#fff;}
+.field textarea{height:110px;}
+.field-2col{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+
+.btn-submit{
+  width:100%;padding:14px;
+  background:var(--purple);color:#fff;
+  font-size:15px;font-weight:700;border:none;
+  border-radius:var(--r);cursor:pointer;
+  font-family:'Poppins',sans-serif;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  transition:background .2s,transform .2s,box-shadow .2s;margin-top:4px;
+}
+.btn-submit:hover{background:var(--purple-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(108,92,231,.35);}
+.form-note{font-size:11px;color:#aaa;text-align:center;margin-top:12px;line-height:1.6;}
+.form-note a{color:var(--purple);text-decoration:none;}
+
+/* SUCCESS */
+#successMsg{display:none;text-align:center;padding:32px 16px;}
+.success-icon{font-size:52px;margin-bottom:16px;}
+#successMsg h3{font-size:22px;font-weight:800;color:var(--dark);margin-bottom:8px;}
+#successMsg p{font-size:14px;color:var(--gray);line-height:1.7;margin-bottom:22px;}
+
+/* ── SIDEBAR ── */
+.sidebar{display:flex;flex-direction:column;gap:20px;}
+
+.side-card{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+.side-card-title{font-size:15px;font-weight:700;color:var(--dark);padding:18px 22px 0;}
+
+/* Quick btns */
+.quick-links{padding:16px 22px 22px;display:flex;flex-direction:column;gap:10px;}
+.qlink{
+  display:flex;align-items:center;gap:12px;
+  padding:12px 16px;border-radius:var(--r);
+  font-size:14px;font-weight:600;text-decoration:none;
+  border:1.5px solid transparent;transition:all .2s;
+}
+.qlink-wa{background:rgba(37,211,102,.08);color:#1da851;border-color:rgba(37,211,102,.2);}
+.qlink-wa:hover{background:rgba(37,211,102,.16);transform:translateX(4px);}
+.qlink-call{background:rgba(108,92,231,.08);color:var(--purple);border-color:rgba(108,92,231,.2);}
+.qlink-call:hover{background:rgba(108,92,231,.15);transform:translateX(4px);}
+.qlink-maps{background:rgba(251,191,36,.08);color:#d97706;border-color:rgba(251,191,36,.2);}
+.qlink-maps:hover{background:rgba(251,191,36,.15);transform:translateX(4px);}
+.qlink-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.qi-wa{background:rgba(37,211,102,.15);}
+.qi-call{background:rgba(108,92,231,.12);}
+.qi-maps{background:rgba(251,191,36,.12);}
+.qlink-text{}
+.qlink-main{font-size:13px;font-weight:700;display:block;line-height:1.2;}
+.qlink-sub{font-size:11px;opacity:.65;}
+
+/* Contact info rows */
+.info-rows{padding:4px 22px 18px;}
+.info-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);}
+.info-row:last-child{border-bottom:none;}
+.info-dot{width:8px;height:8px;border-radius:50%;background:var(--purple);flex-shrink:0;}
+.info-label{font-size:11px;font-weight:700;color:var(--gray);letter-spacing:.4px;text-transform:uppercase;margin-bottom:2px;}
+.info-value{font-size:13px;color:var(--dark);font-weight:500;}
+.info-value a{color:var(--dark);text-decoration:none;transition:color .2s;}
+.info-value a:hover{color:var(--purple);}
+
+/* Reviews */
+.reviews-inner{padding:18px 22px 20px;}
+.rating-row{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+.rating-big{font-size:26px;font-weight:800;color:var(--dark);}
+.stars-row{color:#fbbf24;font-size:15px;letter-spacing:1px;}
+.review-count{font-size:12px;color:var(--gray);}
+.review-item{padding:10px 0;border-bottom:1px solid var(--border);}
+.review-item:last-child{border-bottom:none;}
+.review-stars{color:#fbbf24;font-size:11px;margin-bottom:4px;}
+.review-author{font-size:13px;font-weight:600;color:var(--dark);}
+.review-text{font-size:12px;color:var(--gray);line-height:1.6;margin-top:3px;}
+.all-reviews{display:block;text-align:center;margin-top:14px;font-size:12px;font-weight:700;color:var(--purple);text-decoration:none;}
+.all-reviews:hover{text-decoration:underline;}
+
+/* MAP */
+.map-wrap iframe{display:block;width:100%;height:200px;border:none;}
+.map-footer{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-top:1px solid var(--border);}
+.map-addr{font-size:12px;color:var(--gray);}
+.map-dir{font-size:12px;font-weight:700;color:var(--teal);text-decoration:none;display:flex;align-items:center;gap:4px;}
+.map-dir:hover{text-decoration:underline;}
+
+/* ── FAQ ── */
+.faq-section{padding:0 8% 64px;max-width:800px;margin:0 auto;}
+.sec-tag{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--purple);margin-bottom:8px;display:block;}
+.sec-title{font-size:clamp(22px,3vw,32px);font-weight:800;color:var(--dark);margin-bottom:28px;letter-spacing:-.4px;}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:18px 22px;margin-bottom:10px;cursor:pointer;transition:border-color .2s,box-shadow .2s;}
+.faq-item:hover,.faq-item.open{border-color:rgba(108,92,231,.3);box-shadow:0 2px 12px rgba(108,92,231,.08);}
+.faq-q-row{display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.faq-q-text{font-size:14px;font-weight:600;color:var(--dark);}
+.faq-chevron{color:var(--purple);font-size:12px;transition:transform .3s;flex-shrink:0;}
+.faq-item.open .faq-chevron{transform:rotate(180deg);}
+.faq-answer{font-size:14px;color:var(--gray);line-height:1.75;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s ease;}
+.faq-item.open .faq-answer{max-height:200px;padding-top:12px;}
+
+/* ── FOOTER ── */
+footer{background:#111;color:#fff;padding:36px 8%;}
+.footer-inner{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:flex-start;margin-bottom:24px;}
+.footer-brand .brand-name{font-size:20px;font-weight:700;letter-spacing:1px;margin-bottom:10px;}
+.footer-brand .brand-name span{color:var(--purple);}
+.footer-brand p{font-size:13px;color:#aaa;max-width:300px;line-height:1.65;}
+.footer-social{display:flex;gap:12px;margin-top:16px;}
+.soc-icon{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#aaa;text-decoration:none;font-size:14px;transition:background .2s,color .2s;}
+.soc-icon:hover{background:var(--purple);color:#fff;}
+.footer-col h4{font-size:13px;font-weight:700;color:#fff;margin-bottom:12px;}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:8px;}
+.footer-col a{font-size:13px;color:#aaa;text-decoration:none;transition:color .2s;}
+.footer-col a:hover{color:var(--teal);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;}
+.footer-bottom p{font-size:13px;color:#777;}
+.footer-bottom a{color:#aaa;text-decoration:none;}
+.footer-bottom a:hover{color:var(--teal);}
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float{position:fixed;bottom:26px;right:26px;width:54px;height:54px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.4);z-index:200;transition:transform .25s,box-shadow .25s;}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.55);}
+
+/* ── MOBILE STICKY ── */
+.mob-bar{display:none;position:fixed;bottom:0;left:0;width:100%;z-index:199;}
+.mob-bar a{flex:1;text-align:center;padding:14px;font-weight:700;font-size:15px;text-decoration:none;color:#fff;font-family:'Poppins',sans-serif;}
+.mob-call{background:var(--purple);}
+.mob-wa{background:#25d366;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .navbar{padding:12px 5%;}
+  .nav-links{display:none;position:fixed;top:66px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 5%;gap:16px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:999;}
+  .nav-links.open{display:flex;}
+  .hamburger{display:flex;}
+  .main-grid{grid-template-columns:1fr;padding:32px 5%;}
+  .hero,.faq-section{padding-left:5%;padding-right:5%;}
+  footer{padding:28px 5%;}
+  .footer-inner{flex-direction:column;gap:24px;}
+  .wa-float{bottom:80px;}
+  .mob-bar{display:flex;}
+  .field-2col{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .form-card{padding:26px 18px;}
+  .trust-pills{gap:8px;}
+}
+</style>
 </head>
-
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="index.html" class="nav-brand">PREETI <span>GROWTH</span></a>
-    <a href="index.html" class="nav-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
-    <a href="https://wa.me/918383855004" class="nav-cta"><i class="fab fa-whatsapp"></i> Chat Now</a>
-  </nav>
+<!-- ── NAVBAR: exact same as index.html ── -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-logo">
+    <a href="index.html" aria-label="Preeti Growth Agency Home">
+      <img src="logo.png" alt="Preeti Growth Agency Logo">
+    </a>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#testimonials">Clients</a></li>
+    <li><a href="contact.html" class="active" aria-current="page">Contact Us</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-  <!-- MAIN PAGE GRID -->
-  <div class="page">
+<!-- ── BREADCRUMB ── -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="index.html">Home</a></li>
+    <li style="opacity:.5;margin:0 6px;" aria-hidden="true">/</li>
+    <li aria-current="page">Contact</li>
+  </ol>
+</nav>
 
-    <!-- ── LEFT: Info panel ── -->
-    <div class="left">
+<!-- ── HERO ── -->
+<header class="hero">
+  <div class="hero-pill">
+    <span class="pill-dot"></span>
+    Free Consultation · No Commitment
+  </div>
+  <h1>Apna Business<br><span>Aaj Se Grow</span> Karein</h1>
+  <p>Free digital marketing audit lein — SEO health check, competitor analysis aur personalized lead generation strategy. 2 ghante mein reply guaranteed.</p>
+  <div class="trust-pills">
+    <div class="trust-pill"><i class="fas fa-check-circle"></i> 100% Free Audit</div>
+    <div class="trust-pill"><i class="fas fa-check-circle"></i> 2 Hour Reply</div>
+    <div class="trust-pill"><i class="fas fa-check-circle"></i> No Hidden Charges</div>
+    <div class="trust-pill"><i class="fas fa-check-circle"></i> 50+ Happy Clients</div>
+  </div>
+</header>
 
-      <div class="eyebrow">
-        <span class="eyebrow-dot"></span>
-        Free consultation — no commitment
+<!-- ── MAIN CONTENT ── -->
+<main class="main-grid">
+
+  <!-- FORM -->
+  <div class="form-card">
+    <h2 class="form-title">Free Audit Request Bhejein</h2>
+    <p class="form-sub">Sabhi fields fill karein — hum 2 ghante mein WhatsApp par contact karenge.</p>
+
+    <div id="contactForm">
+      <div class="field-2col">
+        <div class="field">
+          <label for="fname">Aapka Naam *</label>
+          <input type="text" id="fname" name="name" placeholder="Full Name" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="fphone">WhatsApp Number *</label>
+          <input type="tel" id="fphone" name="phone" placeholder="+91 XXXXX XXXXX" required autocomplete="tel">
+        </div>
       </div>
-
-      <h1>
-        Let's grow your<br>
-        business <span class="grad-text">together.</span>
-      </h1>
-
-      <p>
-        Fill the form and our team will reach out within <strong>2 hours</strong>.
-        Get a free audit worth ₹5,000 — absolutely no strings attached.
+      <div class="field">
+        <label for="fbiz">Business Ka Naam</label>
+        <input type="text" id="fbiz" name="business" placeholder="Aapke business ka naam" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="fservice">Service Chahiye *</label>
+        <select id="fservice" name="service" required>
+          <option value="" disabled selected>Service chunein...</option>
+          <option value="Local SEO — Google Maps Ranking">Local SEO — Google Maps Ranking</option>
+          <option value="Meta Ads — Facebook/Instagram Leads">Meta Ads — Facebook/Instagram Leads</option>
+          <option value="Real Estate Lead Generation">Real Estate Lead Generation</option>
+          <option value="Google My Business Optimization">Google My Business Optimization</option>
+          <option value="Complete Digital Marketing Package">Complete Digital Marketing Package</option>
+          <option value="Social Media Management">Social Media Management</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fbudget">Monthly Budget (Optional)</label>
+        <select id="fbudget" name="budget">
+          <option value="" disabled selected>Budget range chunein...</option>
+          <option value="Under ₹5,000">Under ₹5,000/month</option>
+          <option value="₹5,000–₹15,000">₹5,000 – ₹15,000/month</option>
+          <option value="₹15,000–₹30,000">₹15,000 – ₹30,000/month</option>
+          <option value="₹30,000+">₹30,000+/month</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fmsg">Requirement / Message *</label>
+        <textarea id="fmsg" name="message" placeholder="Batayein — aapka business kya hai aur aap kya results chahte hain..." required></textarea>
+      </div>
+      <button class="btn-submit" type="button" onclick="submitForm()">
+        <i class="fab fa-whatsapp" style="font-size:18px;"></i> WhatsApp Par Send Karein
+      </button>
+      <p class="form-note">
+        Submit karke aap hamare <a href="privacy-policy.html">Privacy Policy</a> se agree karte hain.
+        Koi spam nahi — sirf relevant info.
       </p>
-
-      <!-- Trust badges -->
-      <div class="trust-row">
-        <div class="badge"><i class="fas fa-clock"></i> Reply in 2 hrs</div>
-        <div class="badge"><i class="fas fa-shield-alt"></i> No spam</div>
-        <div class="badge"><i class="fas fa-star"></i> 50+ happy clients</div>
-      </div>
-
-      <!-- Stats -->
-      <div class="stats">
-        <div class="stat">
-          <span class="stat-num">150+</span>
-          <span class="stat-label">Leads / month</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">3×</span>
-          <span class="stat-label">Avg. ROI</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">48h</span>
-          <span class="stat-label">To first lead</span>
-        </div>
-      </div>
-
-      <!-- Contact info -->
-      <div class="info-cards">
-        <a href="https://wa.me/918383855004" class="info-card" target="_blank" rel="noopener">
-          <div class="info-icon wa"><i class="fab fa-whatsapp"></i></div>
-          <div class="info-text">
-            <strong>WhatsApp us directly</strong>
-            <span>+91 83838 55004 — typically replies in minutes</span>
-          </div>
-          <i class="fas fa-arrow-right" style="color:#ccc;font-size:12px;flex-shrink:0;"></i>
-        </a>
-
-        <a href="tel:+918383855004" class="info-card">
-          <div class="info-icon ph"><i class="fas fa-phone"></i></div>
-          <div class="info-text">
-            <strong>Call us</strong>
-            <span>+91 83838 55004 — Mon–Sat, 9 AM to 7 PM</span>
-          </div>
-          <i class="fas fa-arrow-right" style="color:#ccc;font-size:12px;flex-shrink:0;"></i>
-        </a>
-
-        <div class="info-card">
-          <div class="info-icon loc"><i class="fas fa-map-marker-alt"></i></div>
-          <div class="info-text">
-            <strong>Visit us</strong>
-            <span>Sector 30, Faridabad, Haryana — Delhi NCR</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Social icons -->
-      <div class="social-strip">
-        <a href="https://www.instagram.com/digital_business_badhao" class="soc ig" target="_blank" rel="noopener"
-          aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/share/1DQxj7EZkw/" class="soc fb" target="_blank" rel="noopener"
-          aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/in/preeti-digital-business-badhao-380864380" class="soc li" target="_blank"
-          rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://wa.me/918383855004" class="soc wa" target="_blank" rel="noopener" aria-label="WhatsApp"><i
-            class="fab fa-whatsapp"></i></a>
-        <a href="https://share.google/tFlM8lh172dPgn65N" class="soc gm" target="_blank" rel="noopener"
-          aria-label="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
-      </div>
-
     </div>
 
-    <!-- ── RIGHT: Form card ── -->
-    <div class="form-card" id="formCard">
-
-      <!-- Form content -->
-      <div id="formContent">
-        <div class="form-header">
-          <h2>Get your free audit <span class="free-badge">FREE</span></h2>
-          <p>Tell us a little about your business and goals — takes under 90 seconds.</p>
-        </div>
-
-        <form id="contactForm" novalidate>
-
-          <!-- Name + Phone -->
-          <div class="field-row">
-            <div class="field">
-              <label for="inp-name">Full name <span class="req">*</span></label>
-              <input type="text" id="inp-name" name="name" placeholder="Aapka naam" autocomplete="name">
-              <span class="err-msg" id="err-name">Please enter your name.</span>
-            </div>
-            <div class="field">
-              <label for="inp-phone">WhatsApp number <span class="req">*</span></label>
-              <input type="tel" id="inp-phone" name="phone" placeholder="10-digit number" autocomplete="tel"
-                maxlength="10">
-              <span class="err-msg" id="err-phone">Enter a valid 10-digit number.</span>
-            </div>
-          </div>
-
-          <!-- Business name + City -->
-          <div class="field-row">
-            <div class="field">
-              <label for="inp-biz">Business name</label>
-              <input type="text" id="inp-biz" name="business" placeholder="Your company / shop"
-                autocomplete="organization">
-            </div>
-            <div class="field">
-              <label for="inp-city">City <span class="req">*</span></label>
-              <input type="text" id="inp-city" name="city" placeholder="e.g. Faridabad" autocomplete="address-level2">
-              <span class="err-msg" id="err-city">Please enter your city.</span>
-            </div>
-          </div>
-
-          <!-- Services -->
-          <div class="field">
-            <label>Services interested in <span class="req">*</span></label>
-            <div class="services-grid" id="servicesGrid">
-              <label class="service-check"><input type="checkbox" value="SEO"> Local SEO</label>
-              <label class="service-check"><input type="checkbox" value="Meta Ads"> Meta Ads</label>
-              <label class="service-check"><input type="checkbox" value="Google Ads"> Google Ads</label>
-              <label class="service-check"><input type="checkbox" value="Lead Generation"> Lead Generation</label>
-              <label class="service-check"><input type="checkbox" value="Social Media"> Social Media</label>
-              <label class="service-check"><input type="checkbox" value="Website"> Website</label>
-            </div>
-            <span class="err-msg" id="err-services">Please select at least one service.</span>
-          </div>
-
-          <!-- Monthly budget slider -->
-          <div class="field">
-            <label>Monthly ad budget</label>
-            <div class="budget-display">
-              <span class="budget-val" id="budgetVal">₹10,000</span>
-              <span class="budget-note">per month</span>
-            </div>
-            <input type="range" id="budgetSlider" min="5000" max="200000" step="5000" value="10000">
-          </div>
-
-          <!-- Goal -->
-          <div class="field">
-            <label for="inp-goal">Industry / business type <span class="req">*</span></label>
-            <div class="select-wrap">
-              <select id="inp-goal" name="goal">
-                <option value="" disabled selected>Select your industry</option>
-                <option value="Real Estate">Real Estate</option>
-                <option value="Finance / Loans">Finance / Loans</option>
-                <option value="E-commerce">E-commerce</option>
-                <option value="Education">Education</option>
-                <option value="Healthcare">Healthcare</option>
-                <option value="Restaurant / Food">Restaurant / Food</option>
-                <option value="Retail / Shop">Retail / Shop</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-            <span class="err-msg" id="err-goal">Please select your industry.</span>
-          </div>
-
-          <!-- Message -->
-          <div class="field">
-            <label for="inp-msg">Anything specific you want help with?</label>
-            <textarea id="inp-msg" name="message"
-              placeholder="e.g. 'Mujhe real estate leads chahiye Faridabad mein...'"></textarea>
-          </div>
-
-          <!-- Submit -->
-          <button type="submit" class="submit-btn" id="submitBtn">
-            <i class="fab fa-whatsapp"></i>
-            Send to WhatsApp — it's free
-          </button>
-
-          <div class="or-divider">or</div>
-
-          <a href="https://wa.me/918383855004?text=Hi%20Preeti%20Growth%20Agency!%20I%20want%20a%20free%20marketing%20audit."
-            class="wa-btn" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i> Chat directly on WhatsApp
-          </a>
-
-          <p class="privacy-note">
-            <i class="fas fa-lock"></i>
-            Your details are 100% private. We never share or sell your data.
-          </p>
-        </form>
-      </div>
-
-      <!-- Success state (hidden until form submits) -->
-      <div class="success-overlay" id="successOverlay">
-        <div class="success-icon"><i class="fas fa-check"></i></div>
-        <h3>Message sent!</h3>
-        <p>Our team will reach out on WhatsApp within <strong>2 hours</strong>. Looking forward to growing your
-          business!</p>
-      </div>
-
+    <div id="successMsg">
+      <div class="success-icon">✅</div>
+      <h3>Message Send Ho Gaya!</h3>
+      <p>Hum 2 ghante ke andar WhatsApp par contact karenge.<br>Urgently bat karni hai?</p>
+      <a href="https://wa.me/918383855004" class="btn-submit" style="text-decoration:none;display:flex;width:fit-content;margin:0 auto;" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> Direct WhatsApp Karein
+      </a>
     </div>
   </div>
 
-  <!-- MAP -->
-  <div class="map-section">
-    <h3>Find us in Faridabad</h3>
-    <div class="map-wrap">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <!-- Quick Contact -->
+    <div class="side-card">
+      <div class="side-card-title">Seedha Baat Karein</div>
+      <div class="quick-links">
+        <a href="https://wa.me/918383855004?text=Hi!%20Free%20digital%20marketing%20audit%20chahiye." class="qlink qlink-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <div class="qlink-icon qi-wa"><i class="fab fa-whatsapp" style="color:#25d366;font-size:18px;"></i></div>
+          <div class="qlink-text">
+            <span class="qlink-main">WhatsApp Message</span>
+            <span class="qlink-sub">+91 83838 55004</span>
+          </div>
+          <i class="fas fa-chevron-right" style="opacity:.4;font-size:11px;"></i>
+        </a>
+        <a href="tel:+918383855004" class="qlink qlink-call" aria-label="Call now">
+          <div class="qlink-icon qi-call"><i class="fas fa-phone-alt" style="color:var(--purple);font-size:16px;"></i></div>
+          <div class="qlink-text">
+            <span class="qlink-main">Call Now</span>
+            <span class="qlink-sub">Mon–Sat · 9 AM – 7 PM</span>
+          </div>
+          <i class="fas fa-chevron-right" style="opacity:.4;font-size:11px;"></i>
+        </a>
+        <a href="https://share.google/tFlM8lh172dPgn65N" class="qlink qlink-maps" target="_blank" rel="noopener noreferrer" aria-label="Find us on Google Maps">
+          <div class="qlink-icon qi-maps"><i class="fas fa-map-marker-alt" style="color:#d97706;font-size:16px;"></i></div>
+          <div class="qlink-text">
+            <span class="qlink-main">Google Maps Par Dekho</span>
+            <span class="qlink-sub">Sector 30, Faridabad</span>
+          </div>
+          <i class="fas fa-chevron-right" style="opacity:.4;font-size:11px;"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Contact Details -->
+    <div class="side-card">
+      <div class="side-card-title">Contact Information</div>
+      <div class="info-rows">
+        <div class="info-row">
+          <div class="info-dot" style="background:#25d366;"></div>
+          <div>
+            <div class="info-label">WhatsApp</div>
+            <div class="info-value"><a href="https://wa.me/918383855004">+91 83838 55004</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-dot" style="background:#fbbf24;"></div>
+          <div>
+            <div class="info-label">Office Address</div>
+            <div class="info-value">Sector 30, Faridabad, Haryana — 121003</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-dot" style="background:var(--teal);"></div>
+          <div>
+            <div class="info-label">Working Hours</div>
+            <div class="info-value">Mon – Sat: 9 AM – 7 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews -->
+    <div class="side-card">
+      <div class="reviews-inner">
+        <div class="rating-row">
+          <div class="rating-big">4.9</div>
+          <div>
+            <div class="stars-row">★★★★★</div>
+            <div class="review-count">50+ Google Reviews</div>
+          </div>
+        </div>
+        <div class="review-item">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-author">Deepak Chaudhary</div>
+          <div class="review-text">"150+ verified real estate leads in 30 days. Excellent Meta Ads strategy!"</div>
+        </div>
+        <div class="review-item">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-author">Kanchan Sardana</div>
+          <div class="review-text">"Best digital marketing in Faridabad. Transparent, great ROI."</div>
+        </div>
+        <div class="review-item">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-author">Amit Singh</div>
+          <div class="review-text">"Local SEO ne hamare GMB ko Top 3 mein laya. Highly recommended!"</div>
+        </div>
+        <a href="https://share.google/wjvXsc9gwexzBMSoy" class="all-reviews" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-google" style="margin-right:5px;"></i>Saare Reviews Padhein
+        </a>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="side-card map-wrap">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14032.222728981358!2d77.30908852331543!3d28.381395982823616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cddec2b6a5555%3A0xc3f58a4365851480!2sSector%2031%2C%20Faridabad%2C%20Haryana!5e0!3m2!1sen!2sin!4v1709230000000!5m2!1sen!2sin"
-        width="100%" height="320" style="border:0;display:block;" allowfullscreen="" loading="lazy"
-        title="Preeti Growth Agency location — Sector 30, Faridabad">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14032.543419047913!2d77.3117!3d28.3970!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cd9f5559f9f1b%3A0x904b12c4d059b04d!2sSector%2030%2C%20Faridabad%2C%20Haryana!5e0!3m2!1sen!2sin!4v1713800000000!5m2!1sen!2sin"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Preeti Growth Agency Location — Sector 30, Faridabad">
       </iframe>
+      <div class="map-footer">
+        <span class="map-addr"><i class="fas fa-map-pin" style="color:var(--purple);margin-right:5px;"></i>Sector 30, Faridabad</span>
+        <a href="https://share.google/tFlM8lh172dPgn65N" class="map-dir" target="_blank" rel="noopener noreferrer">
+          Directions <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /sidebar -->
+</main>
+
+<!-- ── FAQ ── -->
+<section class="faq-section">
+  <span class="sec-tag">FAQ</span>
+  <h2 class="sec-title">Aapke Sawaal — Hamare Jawaab</h2>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q-row">
+      <span class="faq-q-text">Free audit mein exactly kya milega?</span>
+      <i class="fas fa-chevron-down faq-chevron"></i>
+    </div>
+    <div class="faq-answer">Competitor analysis, current SEO health check, Meta Ads strategy recommendation, Google My Business audit aur lead generation roadmap — sab free. Koi hidden charge nahi, koi commitment nahi.</div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q-row">
+      <span class="faq-q-text">Reply kitne time mein milegi?</span>
+      <i class="fas fa-chevron-down faq-chevron"></i>
+    </div>
+    <div class="faq-answer">WhatsApp par 2 ghante ke andar reply milti hai — Monday se Saturday, 9 AM se 7 PM ke beech. Sunday ko emergency mein direct call kar sakte hain.</div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q-row">
+      <span class="faq-q-text">Ads ka budget kaun pay karega?</span>
+      <i class="fas fa-chevron-down faq-chevron"></i>
+    </div>
+    <div class="faq-answer">Ads ka budget aapka apna hoga — aap directly Facebook/Google ko pay karenge. Preeti Growth Agency sirf expert management fee charge karti hai. Koi hidden charges nahi.</div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q-row">
+      <span class="faq-q-text">Kya aap sirf Faridabad mein kaam karte hain?</span>
+      <i class="fas fa-chevron-down faq-chevron"></i>
+    </div>
+    <div class="faq-answer">Nahi. Hum Faridabad mein based hain lekin Delhi, Gurgaon, Noida aur poore Delhi NCR mein services provide karte hain.</div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q-row">
+      <span class="faq-q-text">Results kitne din mein dikhenge?</span>
+      <i class="fas fa-chevron-down faq-chevron"></i>
+    </div>
+    <div class="faq-answer">Meta Ads se 24-48 ghante mein leads aana shuru hoti hain. Local SEO ke results 30-90 din mein clearly dikhne lagte hain. Hum weekly reporting dete hain.</div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand-name">PREETI <span>GROWTH</span></div>
+      <p>Faridabad ki #1 Digital Marketing Agency — SEO, Meta Ads aur Lead Generation mein expert.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/1DQxj7EZkw/" class="soc-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/digital_business_badhao" class="soc-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/preeti-digital-business-badhao-380864380" class="soc-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/918383855004" class="soc-icon" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+918383855004">+91 83838 55004</a></li>
+        <li><a href="https://wa.me/918383855004">WhatsApp Chat</a></li>
+        <li><a href="contact.html">Free Audit Request</a></li>
+        <li>Sector 30, Faridabad HR</li>
+      </ul>
     </div>
   </div>
-
-  <!-- FOOTER -->
-  <div class="footer-strip">
-    © 2026 Preeti Growth Agency —
-    <a href="index.html">Home</a> ·
-    <a href="https://wa.me/918383855004">WhatsApp</a> ·
-    Sector 30, Faridabad, Haryana
+  <div class="footer-bottom">
+    <p>© 2026 Preeti Growth Agency · Sector 30, Faridabad, Haryana</p>
+    <p>
+      <a href="privacy-policy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms of Service</a>
+    </p>
   </div>
+</footer>
 
-  <!-- WhatsApp float -->
-  <a href="https://wa.me/918383855004" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+<a href="https://wa.me/918383855004" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<div class="mob-bar" role="complementary" aria-label="Quick contact">
+  <a href="tel:+918383855004" class="mob-call">📞 Call Now</a>
+  <a href="https://wa.me/918383855004" class="mob-wa" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+</div>
 
-  <script>
-    /* ── Budget slider ── */
-    const slider = document.getElementById('budgetSlider');
-    const budgetVal = document.getElementById('budgetVal');
+<script>
+// Hamburger
+const ham=document.getElementById('hamburger');
+const navL=document.getElementById('navLinks');
+ham.addEventListener('click',()=>{
+  const open=navL.classList.toggle('open');
+  ham.setAttribute('aria-expanded',open);
+});
 
-    function updateSlider() {
-      const val = parseInt(slider.value);
-      const pct = ((val - parseInt(slider.min)) / (parseInt(slider.max) - parseInt(slider.min))) * 100;
-      slider.style.setProperty('--pct', pct + '%');
-      budgetVal.textContent = '₹' + val.toLocaleString('en-IN');
-    }
+// Form submit
+function submitForm(){
+  const name=document.getElementById('fname').value.trim();
+  const phone=document.getElementById('fphone').value.trim();
+  const biz=document.getElementById('fbiz').value.trim();
+  const svc=document.getElementById('fservice').value;
+  const bgt=document.getElementById('fbudget').value;
+  const msg=document.getElementById('fmsg').value.trim();
 
-    slider.addEventListener('input', updateSlider);
-    updateSlider();
+  if(!name){alert('Kripya apna naam enter karein.');return;}
+  if(!phone||phone.replace(/\D/g,'').length<10){alert('Valid WhatsApp number enter karein (10 digits).');return;}
+  if(!svc){alert('Kripya service chunein.');return;}
+  if(!msg){alert('Kripya apni requirement likhen.');return;}
 
-    /* ── Validation helpers ── */
-    function showErr(id, show) {
-      const el = document.getElementById(id);
-      if (!el) return;
-      el.classList.toggle('show', show);
-    }
+  const txt=`🙏 *Preeti Growth Agency — Free Audit Request*\n\n👤 *Naam:* ${name}\n📱 *WhatsApp:* ${phone}${biz?'\n🏢 *Business:* '+biz:''}\n🎯 *Service:* ${svc}${bgt?'\n💰 *Budget:* '+bgt:''}\n📝 *Requirement:* ${msg}\n\n_Sent from website contact form_`;
+  window.open(`https://wa.me/918383855004?text=${encodeURIComponent(txt)}`,'_blank');
+  document.getElementById('contactForm').style.display='none';
+  document.getElementById('successMsg').style.display='block';
+}
 
-    function markField(inputEl, valid) {
-      inputEl.classList.toggle('error', !valid);
-    }
-
-    /* ── Form submit ── */
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const name = document.getElementById('inp-name');
-      const phone = document.getElementById('inp-phone');
-      const city = document.getElementById('inp-city');
-      const goal = document.getElementById('inp-goal');
-      const biz = document.getElementById('inp-biz');
-      const msg = document.getElementById('inp-msg');
-      const checks = document.querySelectorAll('#servicesGrid input:checked');
-
-      /* Validate */
-      let ok = true;
-
-      const nameOk = name.value.trim().length > 1;
-      const phoneOk = /^\d{10}$/.test(phone.value.trim());
-      const cityOk = city.value.trim().length > 1;
-      const goalOk = goal.value !== '';
-      const srvOk = checks.length > 0;
-
-      markField(name, nameOk); showErr('err-name', !nameOk);
-      markField(phone, phoneOk); showErr('err-phone', !phoneOk);
-      markField(city, cityOk); showErr('err-city', !cityOk);
-      markField(goal, goalOk); showErr('err-goal', !goalOk);
-      showErr('err-services', !srvOk);
-
-      if (!nameOk || !phoneOk || !cityOk || !goalOk || !srvOk) return;
-
-      /* Build WhatsApp message */
-      const services = [...checks].map(c => c.value).join(', ');
-      const budget = budgetVal.textContent;
-
-      const text = encodeURIComponent(
-        `*New Inquiry — Preeti Growth Agency* 🚀\n\n` +
-        `*Name:* ${name.value.trim()}\n` +
-        `*Phone:* ${phone.value.trim()}\n` +
-        `*Business:* ${biz.value.trim() || 'Not provided'}\n` +
-        `*City:* ${city.value.trim()}\n` +
-        `*Services:* ${services}\n` +
-        `*Monthly Budget:* ${budget}\n` +
-        `*Industry:* ${goal.value}\n` +
-        `*Message:* ${msg.value.trim() || 'No extra message'}`
-      );
-
-      /* Show loading state */
-      const btn = document.getElementById('submitBtn');
-      btn.classList.add('loading');
-      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening WhatsApp…';
-
-      /* Open WhatsApp then show success */
-      setTimeout(function () {
-        window.open('https://wa.me/918383855004?text=' + text, '_blank');
-
-        document.getElementById('formContent').style.display = 'none';
-        document.getElementById('successOverlay').classList.add('show');
-      }, 800);
-    });
-
-    /* Clear error on input */
-    ['inp-name', 'inp-phone', 'inp-city', 'inp-goal'].forEach(function (id) {
-      const el = document.getElementById(id);
-      if (!el) return;
-      el.addEventListener('input', function () {
-        el.classList.remove('error');
-      });
-    });
-  </script>
-
+// FAQ accordion
+function toggleFaq(el){
+  const isOpen=el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(f=>f.classList.remove('open'));
+  if(!isOpen)el.classList.add('open');
+}
+</script>
 </body>
-
 </html>
