@@ -1,6 +1,11 @@
+# robots.txt — Preeti Growth Agency
+# https://digital-business-badhao.github.io/preeti-growth-agency/
+
 User-agent: *
 Allow: /
-Disallow: /google980b5b5f5183d92d%20(1).html
-Disallow: /google980b5b5f5183d92d%20(4).html
 
+# Block admin or private paths if any
+Disallow: /assets/private/
+
+# Sitemap location
 Sitemap: https://digital-business-badhao.github.io/preeti-growth-agency/sitemap.xml
